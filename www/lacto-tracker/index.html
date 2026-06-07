@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lacto Tracker — Every feeding, remembered.</title>
+  <meta name="description" content="Simple breastfeeding tracker for new moms. One tap to start, one tap to stop. No accounts, works offline. One-time purchase, no subscription." />
+  <meta name="keywords" content="breastfeeding tracker, breastfeeding app, nursing tracker, baby feeding log, lactation tracker, breastfeeding timer, nursing log, breastfeeding statistics, new mom app, iPhone baby app" />
+  <meta name="author" content="noCode23" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://nocode23.com/lacto-tracker/" />
+  <link rel="alternate" hreflang="en"        href="https://nocode23.com/lacto-tracker/" />
+  <link rel="alternate" hreflang="cs"        href="https://nocode23.com/lacto-tracker/index-cs.html" />
+  <link rel="alternate" hreflang="x-default" href="https://nocode23.com/lacto-tracker/" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
+
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://nocode23.com/lacto-tracker/" />
+  <meta property="og:title"       content="Lacto Tracker — Breastfeeding Tracker for New Moms" />
+  <meta property="og:description" content="Simple breastfeeding tracker for new moms. One tap to start, one tap to stop. No accounts, works offline. One-time purchase, no subscription." />
+  <meta property="og:image"       content="https://nocode23.com/lacto-tracker/assets/images/og-image.jpg" />
+  <meta property="og:locale"      content="en_US" />
+  <meta property="og:locale:alternate" content="cs_CZ" />
+  <meta property="og:site_name"   content="Lacto Tracker" />
+
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Lacto Tracker — Breastfeeding Tracker for New Moms" />
+  <meta name="twitter:description" content="Simple breastfeeding tracker for new moms. One tap to start, one tap to stop. No accounts, works offline. One-time purchase, no subscription." />
+  <meta name="twitter:image"       content="https://nocode23.com/lacto-tracker/assets/images/og-image.jpg" />
+
+  <meta name="apple-itunes-app" content="app-id=6760203009" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Lacto Tracker",
+    "description": "Simple breastfeeding tracker for new moms. One tap to start, one tap to stop. No accounts, works offline. One-time purchase, no subscription.",
+    "url": "https://nocode23.com/lacto-tracker/",
+    "applicationCategory": "Utilities/Fitness",
+    "operatingSystem": "iOS",
+    "offers": { "@type": "Offer", "price": "2.99", "priceCurrency": "USD" },
+    "author": { "@type": "Organization", "name": "noCode23" }
+  }
+  </script>
+
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-ext.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+
+  <div class="blob-container" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="../index.html" class="nav-back">← <span>nocode23.com</span></a>
+
+    <a href="#" class="nav-brand">
+      <picture>
+        <source srcset="assets/images/app_logo.webp" type="image/webp" />
+        <img src="assets/images/app_logo.png" alt="Lacto Tracker" class="nav-logo" />
+      </picture>
+      <span class="nav-name">Lacto Tracker</span>
+    </a>
+
+    <div class="nav-right">
+      <div class="lang-switch">
+        <a href="index.html" class="lang-link active">EN</a>
+        <span class="lang-sep">|</span>
+        <a href="index-cs.html" class="lang-link">CS</a>
+      </div>
+      <a href="https://apps.apple.com/app/lacto-tracker/id6760203009"
+         class="btn-nav-download" target="_blank" rel="noopener"
+         aria-label="Download Lacto Tracker on the App Store">
+        <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" width="15" height="15">
+          <path d="M15.25 10.68c-.03-2.77 2.27-4.1 2.37-4.17-1.29-1.89-3.3-2.15-4.02-2.17-1.71-.17-3.34 1.01-4.21 1.01-.86 0-2.19-.98-3.59-.95-1.85.03-3.57 1.08-4.52 2.73C-.3 9.77 1.08 14.7 2.8 17.46c.87 1.26 1.92 2.67 3.3 2.62 1.32-.05 1.82-.84 3.42-.84 1.6 0 2.05.84 3.45.81h.07c1.4-.02 2.42-1.33 3.31-2.62.63-.91 1.12-1.92 1.43-2.97-.03-.01-1.57-.6-1.59-2.78zM12.22 2.58C13.02 1.59 13.55.24 13.39-.96c-1.19.05-2.66.8-3.52 1.77-.77.88-1.37 2.27-1.2 3.6 1.32.1 2.66-.64 3.55-1.83z"/>
+        </svg>
+        Download
+      </a>
+    </div>
+  </nav>
+
+  <main>
+
+  <!-- HERO -->
+  <section id="hero" aria-label="Hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <svg viewBox="0 0 14 14" fill="currentColor" aria-hidden="true" width="14" height="14">
+            <path d="M10.54 7.35c-.02-1.98 1.62-2.94 1.69-2.98-.92-1.35-2.36-1.53-2.87-1.55-1.22-.12-2.38.72-3 .72-.61 0-1.56-.7-2.56-.68-1.32.02-2.54.77-3.22 1.95C-.22 6.97.77 10.5 2 12.47c.62.9 1.37 1.91 2.35 1.87.94-.04 1.3-.6 2.44-.6 1.14 0 1.46.6 2.46.58h.05c1-.01 1.72-.95 2.36-1.87.45-.65.8-1.37 1.02-2.12-.02-.01-1.12-.43-1.14-1.98zM8.73 1.84C9.3 1.14 9.68.17 9.57-.77 8.72-.73 7.72-.22 7.12.49c-.55.63-.98 1.62-.86 2.57.94.07 1.9-.46 2.47-1.22z"/>
+          </svg>
+          Available on the App Store
+        </div>
+
+        <h1 class="hero-headline">
+          Every feeding,<br><span class="accent">remembered.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          One tap to start, one tap to stop — no accounts, no setup, just you and your baby.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="https://apps.apple.com/app/lacto-tracker/id6760203009"
+             class="appstore-badge" target="_blank" rel="noopener">
+            <img src="assets/images/App_Store_Badge_US-UK_RGB_wht_092917.svg"
+                 alt="Download on the App Store" />
+          </a>
+          <a href="#showcase" class="btn-hero-ghost">
+            See how it works <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-phone-wrap" aria-hidden="true">
+        <div class="iphone-frame">
+          <div class="iphone-screen">
+            <picture>
+              <source srcset="assets/images/main_screen.webp" type="image/webp" />
+              <img src="assets/images/main_screen.png" alt="Lacto Tracker home screen" />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUE STRIP -->
+  <div id="value-strip" role="list" aria-label="Key features">
+    <div class="value-strip-inner">
+      <div class="value-item" role="listitem">
+        <span class="value-check" aria-hidden="true">
+          <svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        No subscription
+      </div>
+      <div class="value-item" role="listitem">
+        <span class="value-check" aria-hidden="true">
+          <svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        Works offline
+      </div>
+      <div class="value-item" role="listitem">
+        <span class="value-check" aria-hidden="true">
+          <svg viewBox="0 0 10 10"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        Czech &amp; English
+      </div>
+    </div>
+  </div>
+
+  <!-- SHOWCASE -->
+  <section id="showcase" aria-label="How it works">
+    <div class="showcase-header fade-in">
+      <p class="section-label">How it works</p>
+      <h2 class="section-title">
+        <span class="line">Designed for the moments</span>
+        <span class="line">when your hands are full</span>
+      </h2>
+    </div>
+
+    <div class="showcase-layout">
+      <div class="showcase-phone-col">
+        <div class="showcase-iphone" id="showcasePhone" aria-hidden="true">
+          <div class="showcase-screen" id="showcaseScreen">
+            <picture>
+              <source srcset="assets/images/main_screen.webp" type="image/webp" />
+              <img src="assets/images/main_screen.png" alt="Home screen" class="active" data-step="0" loading="lazy" />
+            </picture>
+            <picture>
+              <source srcset="assets/images/feeding_record.webp" type="image/webp" />
+              <img src="assets/images/feeding_record.png" alt="Record screen" data-step="1" loading="lazy" />
+            </picture>
+            <picture>
+              <source srcset="assets/images/statistics.webp" type="image/webp" />
+              <img src="assets/images/statistics.png" alt="Statistics screen" data-step="2" loading="lazy" />
+            </picture>
+            <picture>
+              <source srcset="assets/images/information.webp" type="image/webp" />
+              <img src="assets/images/information.png" alt="Information screen" data-step="3" loading="lazy" />
+            </picture>
+          </div>
+        </div>
+
+        <div class="showcase-dots" id="showcaseDots" role="tablist" aria-label="Feature screens">
+          <button class="dot active" data-index="0" role="tab" aria-selected="true"  aria-label="Home screen"></button>
+          <button class="dot"        data-index="1" role="tab" aria-selected="false" aria-label="Record screen"></button>
+          <button class="dot"        data-index="2" role="tab" aria-selected="false" aria-label="Statistics screen"></button>
+          <button class="dot"        data-index="3" role="tab" aria-selected="false" aria-label="Information screen"></button>
+        </div>
+      </div>
+
+      <div class="showcase-steps-col" id="showcaseSteps">
+        <article class="showcase-step active" data-step="0">
+          <div class="step-content">
+            <p class="step-eyebrow">01 — Home</p>
+            <h3 class="step-title">Everything at a glance</h3>
+            <p class="step-desc">The home screen gives you an instant overview of your baby's feeding day. See feeding count, total time, average duration, and your longest session — all without opening anything else.</p>
+            <div class="step-tags">
+              <span class="tag">Quick Overview</span>
+              <span class="tag">Last 24 hours</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="showcase-step" data-step="1">
+          <div class="step-content">
+            <p class="step-eyebrow">02 — Record</p>
+            <h3 class="step-title">Start a session in one tap</h3>
+            <p class="step-desc">Choose left or right breast, hit the button — a live timer starts immediately. Stop when you're done. Your most recent sessions appear right below so you always know which side you left off on.</p>
+            <div class="step-tags">
+              <span class="tag">Left breast</span>
+              <span class="tag">Right breast</span>
+              <span class="tag">Live timer</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="showcase-step" data-step="2">
+          <div class="step-content">
+            <p class="step-eyebrow">03 — Statistics</p>
+            <h3 class="step-title">Understand your patterns</h3>
+            <p class="step-desc">Flip between 24h, 7-day, 30-day, and all-time views. A trend bar chart reveals rhythm over time, while summary numbers and the full session list let you dig into every detail.</p>
+            <div class="step-tags">
+              <span class="tag">24h · 7d · 30d · All</span>
+              <span class="tag">Trend chart</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="showcase-step" data-step="3">
+          <div class="step-content">
+            <p class="step-eyebrow">04 — Information</p>
+            <h3 class="step-title">Help when you need it</h3>
+            <p class="step-desc">A built-in how-to guide and FAQ cover everything: when to log a new session, how Live Activity works on the Lock Screen, how data is stored, and how to switch the app language instantly.</p>
+            <div class="step-tags">
+              <span class="tag">FAQ &amp; guide</span>
+              <span class="tag">Live Activity</span>
+              <span class="tag">CZ / EN</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" aria-label="Features">
+    <div class="features-header fade-in">
+      <p class="section-label">Built with care</p>
+      <h2 class="section-title">
+        <span class="line">Simple by design,</span>
+        <span class="line">not by accident</span>
+      </h2>
+    </div>
+
+    <div class="features-grid" id="featuresGrid">
+      <article class="feature-card">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="26" height="26">
+            <path d="M12 2l1.5 4.5L18 8l-4.5 1.5L12 14l-1.5-4.5L6 8l4.5-1.5Z"/>
+            <path d="M19.5 13.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/>
+            <path d="M4.5 15l.5 1.5 1.5.5-1.5.5-.5 1.5-.5-1.5-1.5-.5 1.5-.5z"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">No setup needed</h3>
+        <p class="feature-desc">Open the app and start. No account creation, no permissions to grant. Your data lives entirely on your device.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="26" height="26">
+            <circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none"/>
+            <circle cx="12" cy="12" r="6"/>
+            <circle cx="12" cy="12" r="10" stroke-width="1.2" opacity="0.45"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">One-handed operation</h3>
+        <p class="feature-desc">Large tap targets and a minimal interface mean you can log a session with your free thumb while holding your baby with the other arm.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="26" height="26">
+            <polyline points="3 17 8 11 13 14 20 6"/>
+            <line x1="3" y1="21" x2="21" y2="21"/>
+            <line x1="3" y1="21" x2="3" y2="4"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Instant statistics</h3>
+        <p class="feature-desc">Stats are always current — no syncing, no refresh button. Switch between 24h, 7-day, and 30-day views to spot patterns as they emerge.</p>
+      </article>
+
+      <article class="feature-card feature-card--featured">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="26" height="26">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <polyline points="9 12 11 14 15 10"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Private by default</h3>
+        <p class="feature-desc">No cloud, no analytics on your feeding data, no partner mode to configure. What happens between you and your baby stays on your iPhone.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="26" height="26">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Czech &amp; English</h3>
+        <p class="feature-desc">Switch the app language instantly from the Information screen. The full interface adapts immediately — no restart needed.</p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="26" height="26">
+            <rect x="5" y="2" width="14" height="20" rx="3"/>
+            <rect x="9" y="3.5" width="6" height="2" rx="1" fill="currentColor" stroke="none"/>
+            <circle cx="12" cy="13" r="3.5"/>
+            <polyline points="12 11.5 12 13 13 14"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Live Activity</h3>
+        <p class="feature-desc">While a session is running, a Live Activity on the Lock Screen and Dynamic Island shows the elapsed time — no need to unlock your phone.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" aria-label="Download">
+    <div class="cta-inner fade-in">
+      <div class="cta-phones" aria-hidden="true">
+        <picture>
+          <source srcset="assets/images/main_screen.webp" type="image/webp" />
+          <img src="assets/images/main_screen.png" class="cta-phone-thumb" loading="lazy" alt="" />
+        </picture>
+        <picture>
+          <source srcset="assets/images/feeding_record.webp" type="image/webp" />
+          <img src="assets/images/feeding_record.png" class="cta-phone-thumb cta-phone-thumb--center" loading="lazy" alt="" />
+        </picture>
+        <picture>
+          <source srcset="assets/images/statistics.webp" type="image/webp" />
+          <img src="assets/images/statistics.png" class="cta-phone-thumb cta-phone-thumb--right" loading="lazy" alt="" />
+        </picture>
+      </div>
+      <picture>
+        <source srcset="assets/images/app_logo.webp" type="image/webp" />
+        <img src="assets/images/app_logo.png" alt="Lacto Tracker" class="cta-logo" loading="lazy" />
+      </picture>
+      <h2 class="cta-title">Ready to start tracking?</h2>
+      <p class="cta-subtitle">Available on iPhone — download once, use forever.</p>
+      <a href="https://apps.apple.com/app/lacto-tracker/id6760203009"
+         class="appstore-badge" target="_blank" rel="noopener">
+        <img src="assets/images/App_Store_Badge_US-UK_RGB_wht_092917.svg"
+             alt="Download on the App Store" loading="lazy" />
+      </a>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <a href="#" class="footer-brand">
+        <picture>
+          <source srcset="assets/images/app_logo.webp" type="image/webp" />
+          <img src="assets/images/app_logo.png" alt="" class="footer-logo" loading="lazy" />
+        </picture>
+        <span class="footer-name">Lacto Tracker</span>
+      </a>
+      <p class="footer-copy">© 2025 noCode23</p>
+      <nav class="footer-links" aria-label="Footer links">
+        <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
+        <a href="mailto:support@nocode23.com" class="footer-link">Support</a>
+      </nav>
+      <a href="../index.html" class="footer-back">← nocode23.com</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
