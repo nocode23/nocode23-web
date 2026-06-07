@@ -555,6 +555,15 @@ a.t-tag:hover {
   background: rgba(34,211,238,.14);
   box-shadow: 0 0 22px rgba(34,211,238,.12);
 }
+.t-green {
+  background: rgba(52,211,153,.07);
+  border-color: rgba(52,211,153,.22);
+  color: #34d399;
+}
+.t-green:hover {
+  background: rgba(52,211,153,.14);
+  box-shadow: 0 0 22px rgba(52,211,153,.12);
+}
 
 /* ─── Footer ─── */
 footer {
