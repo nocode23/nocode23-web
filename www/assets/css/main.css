@@ -366,7 +366,7 @@ section {
 .tag-app     { background: rgba(155,89,245,.13); color: var(--violet); border: 1px solid rgba(155,89,245,.2); }
 .tag-grafika { background: rgba(34,211,238,.13); color: var(--cyan);   border: 1px solid rgba(34,211,238,.2); }
 
-.c-tag svg { width: 9px; height: 9px; stroke-width: 1.75; margin-right: 4px; }
+.c-tag svg { width: 13px; height: 13px; stroke-width: 1.5; margin-right: 4px; }
 .c-title {
   font-family: var(--font-display);
   font-weight: 700;
