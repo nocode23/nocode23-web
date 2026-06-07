@@ -46,3 +46,4 @@ nocode23.com/
 |------------|-------|
 | 2026-06-07 | [www] Migrace — index.html a assets/ přesunuty do www/, vytvořena struktura www/data/apps.json, shared/, docs/ |
 | 2026-06-07 | [www] lacto-tracker/ přesunuto do www/, cesty opraveny, .vscode/settings.json přidán pro Live Server |
+| 2026-06-07 | [lacto-tracker] integrován do hlavního repo (odstraněn vlastní .git), nasazen na nocode23.com/lacto-tracker/ |
