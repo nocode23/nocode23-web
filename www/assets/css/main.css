@@ -368,9 +368,9 @@ section {
 
 .c-icon  { display: block; margin-bottom: 14px; }
 .c-icon svg { width: 2rem; height: 2rem; stroke-width: 1.25; }
-.c-violet .c-icon svg { stroke: var(--violet); }
-.c-blue   .c-icon svg { stroke: var(--blue); }
-.c-cyan   .c-icon svg { stroke: var(--cyan); }
+.c-violet .c-icon { color: var(--violet); }
+.c-blue   .c-icon { color: var(--blue); }
+.c-cyan   .c-icon { color: var(--cyan); }
 .c-title {
   font-family: var(--font-display);
   font-weight: 700;
