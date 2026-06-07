@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nocode23 — AI &amp; Vibe Coding Lab</title>
+  <meta name="description" content="Experimentuji s AI a vibe codingem. Weby, aplikace, grafika.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+  <!-- Ambient background -->
+  <div class="blobs" aria-hidden="true">
+    <div class="blob bl1"></div>
+    <div class="blob bl2"></div>
+    <div class="blob bl3"></div>
+    <div class="blob bl4"></div>
+  </div>
+
+  <!-- Nav -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">nocode23</a>
+      <ul class="nav-links">
+        <li><a href="#o-projektu">O projektu</a></li>
+        <li><a href="#projekty">Projekty</a></li>
+        <li><a href="#technologie">Technologie</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" aria-label="Úvod">
+    <div class="hero-badge">AI &amp; Vibe Coding Lab</div>
+    <h1 class="hero-title">
+      <span class="ht-main">nocode</span>
+      <span class="ht-accent">23</span>
+    </h1>
+    <p class="hero-tagline">Experimentuji s AI a vibe codingem. Weby, aplikace, grafika.</p>
+    <p class="hero-sub"><span>Weby</span> &nbsp;·&nbsp; <span>Aplikace</span> &nbsp;·&nbsp; <span>Grafika</span></p>
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="scroll-line"></div>
+      scroll
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="o-projektu">
+    <div class="wrap">
+      <div class="sec-label">O projektu</div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            <strong>nocode23 je osobní laboratoř</strong> experimentů s AI nástroji a přístupem
+            zvaným vibe coding — tvorbou softwaru řízenou představou a intuicí, kde těžkou práci
+            přebírá umělá inteligence.
+          </p>
+          <p>
+            Nezačínám od teorie, ale od projektů. Každý experiment je reálná věc: spuštěný web,
+            funkční aplikace, grafika odeslaná klientovi. Učím se tím, že dělám — a AI mi
+            umožňuje stavět věci, které by dřív vyžadovaly celé týmy.
+          </p>
+          <p>
+            Od jednoduchých <strong>landing pages</strong> přes <strong>iOS aplikace</strong>
+            až po <strong>grafické balíčky pro e-shopy</strong> — hledám hranice toho, co lze
+            postavit bez tradičního vývoje.
+          </p>
+        </div>
+        <div class="about-cards">
+          <div class="a-card reveal d1">
+            <div class="a-num">AI first</div>
+            <div class="a-label">Každý projekt začíná promptem, ne prázdnou stránkou</div>
+          </div>
+          <div class="a-card reveal d2">
+            <div class="a-num">Real</div>
+            <div class="a-label">Jen spuštěné projekty — žádné koncepty do šuplíku</div>
+          </div>
+          <div class="a-card reveal d3">
+            <div class="a-num">Open</div>
+            <div class="a-label">Sdílím co funguje i co ne, bez lesku a s upřímností</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projekty">
+    <div class="wrap">
+      <div class="sec-label">Projekty</div>
+      <h2 class="sec-title reveal">Co jsem postavil</h2>
+
+      <div class="bento">
+
+        <!-- App iOS -->
+        <div class="card c-violet b1 reveal">
+          <span class="c-tag tag-app">App · iOS</span>
+          <span class="c-icon">📱</span>
+          <div class="c-title">iOS Aplikace</div>
+          <div class="c-desc">Nativní aplikace pro iPhone vyvíjené pomocí SwiftUI a AI asistence. Důraz na jednoduchost a soukromí.</div>
+
+          <div class="feat-divider">Spuštěno</div>
+
+          <a href="lacto-tracker/index.html" class="feat-project">
+            <img src="lacto-tracker/assets/images/app_logo.png"
+                 srcset="lacto-tracker/assets/images/app_logo.webp"
+                 alt="Lacto Tracker" class="feat-logo" loading="lazy" />
+            <div class="feat-info">
+              <div class="feat-name">Lacto Tracker</div>
+              <div class="feat-sub">Sledování kojení · iOS · App Store</div>
+            </div>
+            <span style="color:var(--text-dim);font-size:.85rem">→</span>
+          </a>
+        </div>
+
+        <!-- Web -->
+        <div class="card c-blue b2 reveal d1">
+          <span class="c-tag tag-web">Web</span>
+          <span class="c-icon">🌐</span>
+          <div class="c-title">Webové projekty</div>
+          <div class="c-desc">Landing pages, firemní weby a webové nástroje. Od prvního promptu po nasazení — bez tradičního vývoje.</div>
+
+          <div class="feat-divider">Spuštěno</div>
+
+          <a href="https://www.djmatty.cz/" class="feat-project" target="_blank" rel="noopener">
+            <div class="feat-logo" style="background:linear-gradient(135deg,#9B59F5,#4F8EF7);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">🎧</div>
+            <div class="feat-info">
+              <div class="feat-name">DJ Matty</div>
+              <div class="feat-sub">Prezentační web pro profesionálního DJ</div>
+            </div>
+            <span style="color:var(--text-dim);font-size:.85rem;flex-shrink:0;">↗</span>
+          </a>
+        </div>
+
+        <!-- Grafika -->
+        <div class="card c-cyan b3 reveal">
+          <div class="b3-inner">
+            <div>
+              <span class="c-tag tag-grafika">Grafika</span>
+              <span class="c-icon">🎨</span>
+              <div class="c-title">Grafika pro e-shopy</div>
+              <div class="c-desc">AI-generované vizuály pro e-shopy a sociální sítě — bannery, produktové fotografie, Instagram story formáty.</div>
+
+              <div class="feat-divider">Spuštěno</div>
+
+              <a href="https://www.knihyprimus.cz" class="feat-project" target="_blank" rel="noopener">
+                <div class="feat-logo" style="background:linear-gradient(135deg,#22d3ee,#0ea5e9);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">📚</div>
+                <div class="feat-info">
+                  <div class="feat-name">Knihy Primus</div>
+                  <div class="feat-sub">Kompletní redesign rodinného e-shopu</div>
+                </div>
+                <span style="color:var(--text-dim);font-size:.85rem;flex-shrink:0;">↗</span>
+              </a>
+            </div>
+            <div class="swatches">
+              <div class="swatch" style="background:linear-gradient(160deg,#f9a8d4,#fbbf24)"></div>
+              <div class="swatch" style="background:linear-gradient(160deg,#c4b5fd,#818cf8)"></div>
+              <div class="swatch" style="background:linear-gradient(160deg,#6ee7b7,#3b82f6)"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech -->
+  <section id="technologie" class="tech-wrap">
+    <div class="wrap">
+      <div class="sec-label" style="justify-content:center">Technologie</div>
+      <h2 class="sec-title reveal" style="text-align:center">Nástroje v laboratoři</h2>
+      <div class="tech-cloud reveal">
+        <a href="https://claude.ai" class="t-tag t-primary" target="_blank" rel="noopener">Claude AI</a>
+        <a href="https://claude.ai/code" class="t-tag t-primary" target="_blank" rel="noopener">Claude Code</a>
+        <a href="https://chatgpt.com" class="t-tag t-primary" target="_blank" rel="noopener">ChatGPT</a>
+        <a href="https://openai.com/codex" class="t-tag t-primary" target="_blank" rel="noopener">Codex</a>
+        <a href="https://developer.apple.com/swift/" class="t-tag t-violet" target="_blank" rel="noopener">Swift / SwiftUI</a>
+        <a href="https://developer.apple.com/xcode/" class="t-tag t-violet" target="_blank" rel="noopener">Xcode</a>
+        <a href="https://developer.apple.com/testflight/" class="t-tag t-violet" target="_blank" rel="noopener">TestFlight</a>
+        <a href="https://developer.apple.com/app-store-connect/" class="t-tag t-violet" target="_blank" rel="noopener">App Store Connect</a>
+        <a href="https://code.visualstudio.com" class="t-tag t-cyan" target="_blank" rel="noopener">Visual Studio Code</a>
+        <a href="https://www.raycast.com" class="t-tag t-cyan" target="_blank" rel="noopener">Raycast</a>
+        <a href="https://github.com" class="t-tag t-cyan" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://pages.github.com" class="t-tag t-cyan" target="_blank" rel="noopener">GitHub Pages</a>
+        <a href="https://www.wedos.cz/?ap=1zt0iT" class="t-tag t-cyan" target="_blank" rel="noopener">Wedos Hosting</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="f-logo">nocode23</div>
+      <div class="f-copy">nocode23.com &copy; 2026</div>
+      <div class="f-ai">Postaveno <span>s&nbsp;AI</span></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "apps": [
+    {
+      "id": "lacto-tracker",
+      "name": "Lacto Tracker",
+      "status": "live",
+      "category": "App · iOS",
+      "description": "Sledování kojení · iOS · App Store",
+      "appStoreId": "6760203009",
+      "appStoreUrl": "https://apps.apple.com/app/lacto-tracker/id6760203009",
+      "directory": "lacto-tracker",
+      "logo": "lacto-tracker/assets/images/app_logo.png",
+      "logoWebp": "lacto-tracker/assets/images/app_logo.webp",
+      "siteUrl": "lacto-tracker/index.html"
+    }
+  ]
+}
