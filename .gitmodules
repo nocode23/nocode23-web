@@ -1,0 +1,3 @@
+[submodule "www/lacto-tracker"]
+	path = www/lacto-tracker
+	url = https://github.com/nocode23/lacto-tracker-web.git
