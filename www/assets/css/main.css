@@ -366,8 +366,8 @@ section {
 .tag-app     { background: rgba(155,89,245,.13); color: var(--violet); border: 1px solid rgba(155,89,245,.2); }
 .tag-grafika { background: rgba(34,211,238,.13); color: var(--cyan);   border: 1px solid rgba(34,211,238,.2); }
 
-.c-icon  { display: block; margin-bottom: 14px; }
-.c-icon svg { width: 2rem; height: 2rem; stroke-width: 1.25; }
+.c-icon  { position: absolute; top: 20px; right: 20px; }
+.c-icon svg { width: 1.6rem; height: 1.6rem; stroke-width: 1.25; opacity: .7; }
 .c-violet .c-icon { color: var(--violet); }
 .c-blue   .c-icon { color: var(--blue); }
 .c-cyan   .c-icon { color: var(--cyan); }
