@@ -29,6 +29,14 @@ nocode23.com/
         js/main.js
         fonts/
         images/
+    daily-routines-and-habits/ ← git submodule (github.com/nocode23/daily-routines-habits-web)
+      index.html              ← landing page (EN + CS přepínač)
+      privacy.html
+      support.html
+      assets/
+        css/main.css
+        js/main.js
+        images/               ← app-icon.png, screenshoty (light + dark)
   shared/                     ← sdílené assety (zatím prázdné)
   docs/
     STRUCTURE.md              ← tento soubor
@@ -47,9 +55,10 @@ nocode23.com/
 
 ## Aplikace
 
-| ID            | Název         | Stav | GitHub repo            | App Store ID |
-|---------------|---------------|------|------------------------|--------------|
-| lacto-tracker | Lacto Tracker | live | nocode23/lacto-tracker-web (public) | 6760203009 |
+| ID                        | Název                      | Stav        | GitHub repo                              | App Store ID |
+|---------------------------|----------------------------|-------------|------------------------------------------|--------------|
+| lacto-tracker             | Lacto Tracker              | live        | nocode23/lacto-tracker-web (public)      | 6760203009   |
+| daily-routines-and-habits | Daily Routines &amp; Habits | in review   | nocode23/daily-routines-habits-web (public) | TBD       |
 
 ## Changelog
 
@@ -60,3 +69,5 @@ nocode23.com/
 | 2026-06-07 | [www] Cloudflare Pages nasazen, DNS přesunuto na Cloudflare |
 | 2026-06-07 | [www] Meta tagy, Lucide ikony v bento tagech, t-green barva pro hosting/infra |
 | 2026-06-07 | [www] Loga DJ Matty a Knihy Primus stažena lokálně do assets/images/ |
+| 2026-06-08 | [www] Daily Routines &amp; Habits přidána do bento gridu jako druhá iOS aplikace |
+| 2026-06-08 | [daily-routines] Submodule github.com/nocode23/daily-routines-habits-web přidán, CLAUDE.md v .gitignore |
