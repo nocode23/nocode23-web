@@ -460,6 +460,9 @@ a.feat-project:hover {
   background: rgba(255,255,255,.08);
   border-color: var(--border-bright);
 }
+.feat-project + .feat-project {
+  margin-top: 8px;
+}
 .feat-logo {
   width: 36px;
   height: 36px;
