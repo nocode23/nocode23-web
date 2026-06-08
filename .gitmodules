@@ -1,3 +1,6 @@
 [submodule "www/lacto-tracker"]
 	path = www/lacto-tracker
 	url = https://github.com/nocode23/lacto-tracker-web.git
+[submodule "www/daily-routines-and-habits"]
+	path = www/daily-routines-and-habits
+	url = https://github.com/nocode23/daily-routines-habits-web.git
