@@ -4,26 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>nocode23 — AI &amp; Vibe Coding Lab</title>
-  <meta name="description" content="Experimentuji s AI a vibe codingem. Weby, aplikace, grafika.">
+  <meta name="description" content="Experimentuji s AI a vibe codingem. Od promptu ke spuštěnému produktu — weby, aplikace, grafika.">
   <meta name="author" content="nocode23">
   <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#07070e">
   <link rel="canonical" href="https://nocode23.com/">
+
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/images/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
 
   <meta property="og:type"        content="website">
   <meta property="og:url"         content="https://nocode23.com/">
   <meta property="og:title"       content="nocode23 — AI &amp; Vibe Coding Lab">
-  <meta property="og:description" content="Experimentuji s AI a vibe codingem. Weby, aplikace, grafika.">
+  <meta property="og:description" content="Experimentuji s AI a vibe codingem. Od promptu ke spuštěnému produktu — weby, aplikace, grafika.">
+  <meta property="og:image"       content="https://nocode23.com/assets/images/og.png">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:locale"      content="cs_CZ">
   <meta property="og:site_name"   content="nocode23">
 
-  <meta name="twitter:card"        content="summary">
+  <meta name="twitter:card"        content="summary_large_image">
   <meta name="twitter:title"       content="nocode23 — AI &amp; Vibe Coding Lab">
-  <meta name="twitter:description" content="Experimentuji s AI a vibe codingem. Weby, aplikace, grafika.">
+  <meta name="twitter:description" content="Experimentuji s AI a vibe codingem. Od promptu ke spuštěnému produktu — weby, aplikace, grafika.">
+  <meta name="twitter:image"       content="https://nocode23.com/assets/images/og.png">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/main.css?v=3">
+  <link rel="preload" href="assets/fonts/syne-800-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/outfit-300-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="assets/css/main.css?v=4">
 </head>
 <body>
 
@@ -43,6 +52,7 @@
         <li><a href="#o-projektu">O projektu</a></li>
         <li><a href="#projekty">Projekty</a></li>
         <li><a href="#technologie">Technologie</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
       </ul>
     </div>
   </nav>
@@ -54,8 +64,12 @@
       <span class="ht-main">nocode</span>
       <span class="ht-accent">23</span>
     </h1>
-    <p class="hero-tagline">Experimentuji s AI a vibe codingem. Weby, aplikace, grafika.</p>
+    <p class="hero-tagline">Od promptu ke spuštěnému produktu.</p>
     <p class="hero-sub"><span>Weby</span> &nbsp;·&nbsp; <span>Aplikace</span> &nbsp;·&nbsp; <span>Grafika</span></p>
+    <div class="hero-cta">
+      <a href="#projekty" class="btn btn-primary">Prohlédnout projekty</a>
+      <a href="mailto:support@nocode23.com" class="btn btn-ghost">Napište mi</a>
+    </div>
     <div class="hero-scroll" aria-hidden="true">
       <div class="scroll-line"></div>
       scroll
@@ -66,6 +80,7 @@
   <section id="o-projektu">
     <div class="wrap">
       <div class="sec-label">O projektu</div>
+      <h2 class="sec-title reveal">Laboratoř, ne agentura</h2>
       <div class="about-grid">
         <div class="about-text reveal">
           <p>
@@ -75,27 +90,40 @@
           </p>
           <p>
             Nezačínám od teorie, ale od projektů. Každý experiment je reálná věc: spuštěný web,
-            funkční aplikace, grafika odeslaná klientovi. Učím se tím, že dělám — a AI mi
-            umožňuje stavět věci, které by dřív vyžadovaly celé týmy.
+            funkční aplikace, grafika odeslaná klientovi. Od <strong>landing pages</strong> přes
+            <strong>iOS aplikace</strong> až po <strong>grafiku pro e-shopy</strong> hledám hranice
+            toho, co lze postavit bez tradičního vývoje — a sdílím, co funguje i co ne.
           </p>
-          <p>
-            Od jednoduchých <strong>landing pages</strong> přes <strong>iOS aplikace</strong>
-            až po <strong>grafické balíčky pro e-shopy</strong> — hledám hranice toho, co lze
-            postavit bez tradičního vývoje.
-          </p>
+          <div class="stats">
+            <div class="stat reveal d1">
+              <div class="stat-num">4</div>
+              <div class="stat-label">spuštěné projekty</div>
+            </div>
+            <div class="stat reveal d2">
+              <div class="stat-num">2</div>
+              <div class="stat-label">aplikace v&nbsp;App&nbsp;Storu</div>
+            </div>
+            <div class="stat reveal d3">
+              <div class="stat-num">1</div>
+              <div class="stat-label">člověk + AI</div>
+            </div>
+          </div>
         </div>
-        <div class="about-cards">
-          <div class="a-card reveal d1">
-            <div class="a-num">AI first</div>
-            <div class="a-label">Každý projekt začíná promptem, ne prázdnou stránkou</div>
+        <div class="term reveal d1" aria-label="Ukázka pracovního postupu">
+          <div class="term-head">
+            <span class="term-dot td-r"></span>
+            <span class="term-dot td-y"></span>
+            <span class="term-dot td-g"></span>
+            <span class="term-title">nocode23 — lab</span>
           </div>
-          <div class="a-card reveal d2">
-            <div class="a-num">Real</div>
-            <div class="a-label">Jen spuštěné projekty — žádné koncepty do šuplíku</div>
-          </div>
-          <div class="a-card reveal d3">
-            <div class="a-num">Open</div>
-            <div class="a-label">Sdílím co funguje i co ne, bez lesku a s upřímností</div>
+          <div class="term-body">
+            <div class="term-line"><span class="t-prompt">&gt;</span> postav web pro profesionálního DJ</div>
+            <div class="term-line t-out"><span class="t-ok">✓</span> djmatty.cz <span class="t-meta">· spuštěno</span></div>
+            <div class="term-line"><span class="t-prompt">&gt;</span> vytvoř iOS appku pro sledování kojení</div>
+            <div class="term-line t-out"><span class="t-ok">✓</span> Lacto Tracker <span class="t-meta">· App Store</span></div>
+            <div class="term-line"><span class="t-prompt">&gt;</span> navrhni nový vizuál pro rodinný e-shop</div>
+            <div class="term-line t-out"><span class="t-ok">✓</span> knihyprimus.cz <span class="t-meta">· redesign</span></div>
+            <div class="term-line"><span class="t-prompt">&gt;</span>&nbsp;<span class="term-caret"></span></div>
           </div>
         </div>
       </div>
@@ -112,49 +140,74 @@
 
         <!-- App iOS -->
         <div class="card c-violet b1 reveal">
-          <span class="c-tag tag-app"><i data-lucide="circuit-board"></i>App · iOS</span>
-          <div class="c-title">iOS Aplikace</div>
+          <span class="c-tag tag-app">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M11 9h4a2 2 0 0 0 2-2V3"/><circle cx="9" cy="9" r="2"/><path d="M7 21v-4a2 2 0 0 1 2-2h4"/><circle cx="15" cy="15" r="2"/></svg>
+            Aplikace · iOS
+          </span>
+          <div class="c-title">iOS aplikace</div>
           <div class="c-desc">Nativní aplikace pro iPhone vyvíjené pomocí SwiftUI a AI asistence. Důraz na jednoduchost a soukromí.</div>
 
           <div class="feat-divider">Spuštěno</div>
 
-          <a href="lacto-tracker/index.html" class="feat-project">
-            <img src="lacto-tracker/assets/images/app_logo.png"
-                 srcset="lacto-tracker/assets/images/app_logo.webp"
-                 alt="Lacto Tracker" class="feat-logo" loading="lazy" />
-            <div class="feat-info">
-              <div class="feat-name">Lacto Tracker</div>
-              <div class="feat-sub">Sledování kojení · iOS · App Store</div>
+          <div class="app-duo">
+            <div class="app-cell">
+              <img src="lacto-tracker/assets/images/main_screen_cs.webp"
+                   alt="Lacto Tracker — hlavní obrazovka aplikace" class="app-shot" loading="lazy" width="620" height="1341">
+              <a href="lacto-tracker/" class="feat-project">
+                <img src="lacto-tracker/assets/images/app_logo.png"
+                     srcset="lacto-tracker/assets/images/app_logo.webp"
+                     alt="" class="feat-logo" loading="lazy">
+                <div class="feat-info">
+                  <div class="feat-name">Lacto Tracker</div>
+                  <div class="feat-sub">Sledování kojení · App Store</div>
+                </div>
+                <span class="feat-arrow">→</span>
+              </a>
             </div>
-            <span style="color:var(--text-dim);font-size:.85rem">→</span>
-          </a>
-
-          <a href="daily-routines-and-habits/index.html" class="feat-project">
-            <img src="daily-routines-and-habits/assets/images/app-icon.png"
-                 alt="Daily Routines &amp; Habits" class="feat-logo" loading="lazy" />
-            <div class="feat-info">
-              <div class="feat-name">Daily Routines &amp; Habits</div>
-              <div class="feat-sub">Sledování návyků · iOS · App Store</div>
+            <div class="app-cell">
+              <img src="daily-routines-and-habits/assets/images/01_dashboard_dark.png"
+                   alt="Daily Routines &amp; Habits — přehled návyků" class="app-shot" loading="lazy" width="1320" height="2868">
+              <a href="daily-routines-and-habits/" class="feat-project">
+                <img src="daily-routines-and-habits/assets/images/app-icon.png"
+                     alt="" class="feat-logo" loading="lazy">
+                <div class="feat-info">
+                  <div class="feat-name">Daily Routines &amp; Habits</div>
+                  <div class="feat-sub">Sledování návyků · App Store</div>
+                </div>
+                <span class="feat-arrow">→</span>
+              </a>
             </div>
-            <span style="color:var(--text-dim);font-size:.85rem">→</span>
-          </a>
+          </div>
         </div>
 
         <!-- Web -->
         <div class="card c-blue b2 reveal d1">
-          <span class="c-tag tag-web"><i data-lucide="network"></i>Web</span>
+          <span class="c-tag tag-web">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></svg>
+            Web
+          </span>
           <div class="c-title">Webové projekty</div>
           <div class="c-desc">Landing pages, firemní weby a webové nástroje. Od prvního promptu po nasazení — bez tradičního vývoje.</div>
+
+          <div class="browser">
+            <div class="browser-head">
+              <span class="term-dot td-r"></span>
+              <span class="term-dot td-y"></span>
+              <span class="term-dot td-g"></span>
+              <span class="browser-url">djmatty.cz</span>
+            </div>
+            <img src="assets/images/shot-djmatty.jpg" alt="Náhled webu DJ Matty" class="browser-shot" loading="lazy" width="1280" height="800">
+          </div>
 
           <div class="feat-divider">Spuštěno</div>
 
           <a href="https://www.djmatty.cz/" class="feat-project" target="_blank" rel="noopener">
-            <img src="assets/images/logo-djmatty.png" alt="DJ Matty" class="feat-logo" style="width:120px;height:44px;object-fit:contain;background:white;padding:3px 8px;border-radius:6px;" />
+            <div class="feat-logo feat-logo-emoji" aria-hidden="true">🎧</div>
             <div class="feat-info">
               <div class="feat-name">DJ Matty</div>
               <div class="feat-sub">Prezentační web pro profesionálního DJ</div>
             </div>
-            <span style="color:var(--text-dim);font-size:.85rem;flex-shrink:0;">↗</span>
+            <span class="feat-arrow">↗</span>
           </a>
         </div>
 
@@ -162,25 +215,32 @@
         <div class="card c-cyan b3 reveal">
           <div class="b3-inner">
             <div>
-              <span class="c-tag tag-grafika"><i data-lucide="layers"></i>Grafika</span>
+              <span class="c-tag tag-grafika">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>
+                Grafika
+              </span>
               <div class="c-title">Grafika pro e-shopy</div>
               <div class="c-desc">AI-generované vizuály pro e-shopy a sociální sítě — bannery, produktové fotografie, Instagram story formáty.</div>
 
               <div class="feat-divider">Spuštěno</div>
 
               <a href="https://www.knihyprimus.cz" class="feat-project" target="_blank" rel="noopener">
-                <img src="assets/images/logo-knihyprimus.png" alt="Knihy Primus" class="feat-logo" style="object-fit:contain;background:white;padding:4px;" />
+                <div class="feat-logo feat-logo-emoji" aria-hidden="true">📚</div>
                 <div class="feat-info">
                   <div class="feat-name">Knihy Primus</div>
                   <div class="feat-sub">Kompletní redesign rodinného e-shopu</div>
                 </div>
-                <span style="color:var(--text-dim);font-size:.85rem;flex-shrink:0;">↗</span>
+                <span class="feat-arrow">↗</span>
               </a>
             </div>
-            <div class="swatches">
-              <div class="swatch" style="background:linear-gradient(160deg,#f9a8d4,#fbbf24)"></div>
-              <div class="swatch" style="background:linear-gradient(160deg,#c4b5fd,#818cf8)"></div>
-              <div class="swatch" style="background:linear-gradient(160deg,#6ee7b7,#3b82f6)"></div>
+            <div class="browser b3-browser">
+              <div class="browser-head">
+                <span class="term-dot td-r"></span>
+                <span class="term-dot td-y"></span>
+                <span class="term-dot td-g"></span>
+                <span class="browser-url">knihyprimus.cz</span>
+              </div>
+              <img src="assets/images/shot-knihyprimus.jpg" alt="Náhled e-shopu Knihy Primus" class="browser-shot" loading="lazy" width="1280" height="800">
             </div>
           </div>
         </div>
@@ -192,23 +252,48 @@
   <!-- Tech -->
   <section id="technologie" class="tech-wrap">
     <div class="wrap">
-      <div class="sec-label" style="justify-content:center">Technologie</div>
-      <h2 class="sec-title reveal" style="text-align:center">Nástroje v laboratoři</h2>
-      <div class="tech-cloud reveal">
-        <a href="https://claude.ai" class="t-tag t-primary" target="_blank" rel="noopener">Claude AI</a>
-        <a href="https://claude.ai/code" class="t-tag t-primary" target="_blank" rel="noopener">Claude Code</a>
-        <a href="https://chatgpt.com" class="t-tag t-primary" target="_blank" rel="noopener">ChatGPT</a>
-        <a href="https://openai.com/codex" class="t-tag t-primary" target="_blank" rel="noopener">Codex</a>
-        <a href="https://developer.apple.com/swift/" class="t-tag t-violet" target="_blank" rel="noopener">Swift / SwiftUI</a>
-        <a href="https://developer.apple.com/xcode/" class="t-tag t-violet" target="_blank" rel="noopener">Xcode</a>
-        <a href="https://developer.apple.com/testflight/" class="t-tag t-violet" target="_blank" rel="noopener">TestFlight</a>
-        <a href="https://developer.apple.com/app-store-connect/" class="t-tag t-violet" target="_blank" rel="noopener">App Store Connect</a>
-        <a href="https://code.visualstudio.com" class="t-tag t-cyan" target="_blank" rel="noopener">Visual Studio Code</a>
-        <a href="https://www.raycast.com" class="t-tag t-cyan" target="_blank" rel="noopener">Raycast</a>
-        <a href="https://github.com" class="t-tag t-green" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://pages.github.com" class="t-tag t-green" target="_blank" rel="noopener">GitHub Pages</a>
-        <a href="https://www.wedos.cz/?ap=1zt0iT" class="t-tag t-green" target="_blank" rel="noopener">Wedos Hosting</a>
-        <a href="https://www.cloudflare.com" class="t-tag t-green" target="_blank" rel="noopener">Cloudflare</a>
+      <div class="sec-label sec-label-center">Technologie</div>
+      <h2 class="sec-title sec-title-center reveal">Nástroje v laboratoři</h2>
+      <div class="tech-groups reveal">
+        <div class="tech-group">
+          <div class="tg-label">AI</div>
+          <a href="https://claude.ai" class="t-tag t-primary" target="_blank" rel="noopener">Claude AI</a>
+          <a href="https://claude.ai/code" class="t-tag t-primary" target="_blank" rel="noopener">Claude Code</a>
+          <a href="https://chatgpt.com" class="t-tag t-primary" target="_blank" rel="noopener">ChatGPT</a>
+          <a href="https://openai.com/codex" class="t-tag t-primary" target="_blank" rel="noopener">Codex</a>
+        </div>
+        <div class="tech-group">
+          <div class="tg-label">Apple vývoj</div>
+          <a href="https://developer.apple.com/swift/" class="t-tag t-violet" target="_blank" rel="noopener">Swift / SwiftUI</a>
+          <a href="https://developer.apple.com/xcode/" class="t-tag t-violet" target="_blank" rel="noopener">Xcode</a>
+          <a href="https://developer.apple.com/testflight/" class="t-tag t-violet" target="_blank" rel="noopener">TestFlight</a>
+          <a href="https://developer.apple.com/app-store-connect/" class="t-tag t-violet" target="_blank" rel="noopener">App Store Connect</a>
+        </div>
+        <div class="tech-group">
+          <div class="tg-label">Editor &amp; nástroje</div>
+          <a href="https://code.visualstudio.com" class="t-tag t-cyan" target="_blank" rel="noopener">Visual Studio Code</a>
+          <a href="https://www.raycast.com" class="t-tag t-cyan" target="_blank" rel="noopener">Raycast</a>
+        </div>
+        <div class="tech-group">
+          <div class="tg-label">Infrastruktura</div>
+          <a href="https://github.com" class="t-tag t-green" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://pages.github.com" class="t-tag t-green" target="_blank" rel="noopener">GitHub Pages</a>
+          <a href="https://www.wedos.cz/?ap=1zt0iT" class="t-tag t-green" target="_blank" rel="noopener">Wedos Hosting</a>
+          <a href="https://www.cloudflare.com" class="t-tag t-green" target="_blank" rel="noopener">Cloudflare</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="kontakt" class="contact-wrap">
+    <div class="wrap">
+      <div class="sec-label sec-label-center">Kontakt</div>
+      <h2 class="sec-title sec-title-center reveal">Máte nápad? Pojďme ho spustit.</h2>
+      <p class="contact-sub reveal">Ať už chcete web, aplikaci, nebo grafiku — ozvěte se.</p>
+      <div class="hero-cta contact-cta reveal d1">
+        <a href="mailto:support@nocode23.com" class="btn btn-primary">Napište mi</a>
+        <a href="mailto:support@nocode23.com" class="contact-mail">support@nocode23.com</a>
       </div>
     </div>
   </section>
@@ -217,13 +302,11 @@
   <footer>
     <div class="footer-inner">
       <div class="f-logo">nocode23</div>
-      <div class="f-copy">nocode23.com &copy; 2026</div>
+      <div class="f-copy">nocode23.com &copy; 2026 · <a href="mailto:support@nocode23.com" class="f-link">support@nocode23.com</a></div>
       <div class="f-ai">Postaveno <span>s&nbsp;AI</span></div>
     </div>
   </footer>
 
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-  <script>document.addEventListener('DOMContentLoaded', () => lucide.createIcons());</script>
   <script src="assets/js/main.js" defer></script>
 
 </body>

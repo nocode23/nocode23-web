@@ -5,9 +5,14 @@ const obs = new IntersectionObserver(
 );
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
-// Blob physics engine
+// Blob physics — pomalé plutí, odpuzování od kurzoru, odrazy od stěn i sebe navzájem.
+// Pozicuje se přes transform (bez layout přepočtu); základní pozice v CSS
+// zůstávají jako fallback bez JS / s reduced motion.
 (function () {
-  const els = ['bl1','bl2','bl3','bl4'].map(c => document.querySelector('.' + c));
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const els = ['bl1','bl2','bl3','bl4'].map(c => document.querySelector('.' + c)).filter(Boolean);
+  if (!els.length) return;
 
   const speeds = [0.55, 0.75, 0.60, 0.90];
   const angles = [0.4,  2.3,  4.1,  5.5 ];
@@ -22,6 +27,9 @@ document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
     const W = window.innerWidth, H = window.innerHeight;
     blobs = els.map((el, i) => {
       const r = el.offsetWidth / 2;
+      // CSS pozice nahrazuje JS — ukotvit do levého horního rohu a hýbat transformem
+      el.style.left = '0'; el.style.top = '0';
+      el.style.right = 'auto'; el.style.bottom = 'auto';
       return {
         el, r,
         speed: speeds[i],
@@ -62,8 +70,7 @@ document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
       if (b.y - b.r < 0)  { b.y = b.r;     b.vy =  Math.abs(b.vy); }
       if (b.y + b.r > H)  { b.y = H - b.r; b.vy = -Math.abs(b.vy); }
 
-      b.el.style.left = (b.x - b.r) + 'px';
-      b.el.style.top  = (b.y - b.r) + 'px';
+      b.el.style.transform = `translate3d(${b.x - b.r}px, ${b.y - b.r}px, 0)`;
     });
 
     // Blob–blob kolize
@@ -92,68 +99,20 @@ document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
   window.addEventListener('resize', init);
 })();
 
-// Desktop-only: cursor + spotlight
-if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-  const spotlight = document.createElement('div');
-  spotlight.className = 'cursor-spotlight';
-  document.body.insertBefore(spotlight, document.body.firstChild);
+// Scrollspy — zvýraznění aktivní sekce v navigaci
+(function () {
+  const links = [...document.querySelectorAll('.nav-links a[href^="#"]')];
+  if (!links.length) return;
+  const sections = links
+    .map(a => document.getElementById(a.getAttribute('href').slice(1)))
+    .filter(Boolean);
 
-  const dot = document.createElement('div');
-  dot.className = 'cursor-dot';
-  const ring = document.createElement('div');
-  ring.className = 'cursor-ring';
-  document.body.appendChild(dot);
-  document.body.appendChild(ring);
-  document.body.classList.add('custom-cursor');
+  const spy = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
 
-  let mx = -200, my = -200;
-  let rx = -200, ry = -200;
-
-  document.addEventListener('mousemove', e => {
-    mx = e.clientX;
-    my = e.clientY;
-    dot.style.left = mx + 'px';
-    dot.style.top  = my + 'px';
-    spotlight.style.opacity = '1';
-    spotlight.style.background = `radial-gradient(520px circle at ${mx}px ${my}px, rgba(79,142,247,.08), transparent 60%)`;
-  });
-
-  document.addEventListener('mouseleave', () => { spotlight.style.opacity = '0'; });
-
-  (function cursorLoop() {
-    rx += (mx - rx) * 0.11;
-    ry += (my - ry) * 0.11;
-    ring.style.left = rx + 'px';
-    ring.style.top  = ry + 'px';
-    requestAnimationFrame(cursorLoop);
-  })();
-
-  document.querySelectorAll('a, button').forEach(el => {
-    el.addEventListener('mouseenter', () => ring.classList.add('is-hover'));
-    el.addEventListener('mouseleave', () => ring.classList.remove('is-hover'));
-  });
-}
-
-// Typewriter hero tagline
-const tagline = document.querySelector('.hero-tagline');
-if (tagline) {
-  const text = tagline.textContent.trim();
-  tagline.textContent = '';
-  tagline.style.cssText = 'opacity:1;transform:none;animation:none;';
-
-  const caret = document.createElement('span');
-  caret.className = 'type-cursor';
-  tagline.appendChild(caret);
-
-  let i = 0;
-  setTimeout(() => {
-    const id = setInterval(() => {
-      if (i < text.length) {
-        tagline.insertBefore(document.createTextNode(text[i++]), caret);
-      } else {
-        clearInterval(id);
-        setTimeout(() => { caret.style.opacity = '0'; }, 2500);
-      }
-    }, 38);
-  }, 900);
-}
+  sections.forEach(s => spy.observe(s));
+})();

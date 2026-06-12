@@ -29,11 +29,15 @@ nocode23.com/
 ## Design systém — index.html
 
 - **Pozadí:** `#07070e` (near-black)
-- **Fonty:** Syne (display, Google Fonts) + Outfit (body) + JetBrains Mono
+- **Fonty:** Syne (display) + Outfit (body) + JetBrains Mono — self-hosted woff2 v `assets/fonts/` (latin + latin-ext kvůli češtině)
 - **Akcenty:** `--blue: #4F8EF7`, `--violet: #9B59F5`, `--cyan: #22d3ee`
-- **Blobové pozadí:** třídy `.bl1`–`.bl4` (pozor: `.b1`–`.b3` jsou bento karty — neplést!)
-- **Bento grid:** 12 sloupců, karty `.b1` (span 5), `.b2` (span 7), `.b3` (span 12)
+- **Blobové pozadí:** třídy `.bl1`–`.bl4` (pozor: `.b1`–`.b3` jsou bento karty — neplést!); fyzikální engine v JS (plutí, odpuzování od kurzoru, kolize) pozicuje přes `transform`; CSS pozice slouží jen jako fallback bez JS / s reduced motion
+- **Bento grid:** 12 sloupců, karty `.b1` iOS (span 7), `.b2` Web (span 5), `.b3` Grafika (span 12)
 - **Hover glow:** `::after` pseudo-element musí mít `pointer-events: none` jinak blokuje klikání
+- **Vizuály projektů:** `.app-duo`/`.app-shot` (screenshoty telefonů v iOS kartě), `.browser`/`.browser-shot` (browser frame s náhledem webu — `assets/images/shot-*.jpg`)
+- **Lab motiv:** terminálové okno `.term` v sekci O projektu (prompt → spuštěný projekt)
+- **Sekce:** hero (CTA tlačítka) → o-projektu (text + stats + terminál) → projekty → technologie (skupiny s `.tg-label`) → kontakt → footer
+- **Ikony:** inline SVG (lucide paths) přímo v HTML — žádný externí skript
 
 ## Design systém — lacto-tracker/
 
@@ -43,10 +47,12 @@ nocode23.com/
 
 ## Projekty v bento gridu
 
-### App · iOS (`.b1`)
+### Aplikace · iOS (`.b1`)
 - **Lacto Tracker** — sledování kojení, App Store ID `6760203009`
-  - Stránka: `lacto-tracker/index.html`
+  - Stránka: `lacto-tracker/`
   - App Store: `https://apps.apple.com/app/lacto-tracker/id6760203009`
+- **Daily Routines & Habits** — sledování návyků
+  - Stránka: `daily-routines-and-habits/`
 
 ### Web (`.b2`)
 - **DJ Matty** — prezentační web pro profesionálního DJ
@@ -68,12 +74,15 @@ Před prvním projektem v kartě přidat `<div class="feat-divider">Spuštěno</
 
 ## Důležité technické poznámky
 
-- `overflow: hidden` na `.card` **nesmí být** — způsobuje ořez obsahu v Safari při kombinaci s `backdrop-filter`
+- `overflow: hidden` na `.card` **nesmí být** — způsobuje ořez obsahu v Safari při kombinaci s `backdrop-filter` (na vnitřním `.browser` bez backdrop-filteru je OK)
 - `::after` glow efekt musí mít `pointer-events: none` — jinak blokuje klikání na odkazy
 - Blob třídy jsou `.bl1`–`.bl4`, bento slot třídy jsou `.b1`–`.b3` — nikdy neplést
+- Scroll reveal (`.reveal`) se skrývá jen pod `html.js` (třída přidaná inline skriptem v `<head>`) — bez JS zůstane obsah viditelný; neměnit na plošné `opacity: 0`
+- Respektovat `prefers-reduced-motion` — CSS media query vypíná animace, JS drift blobů se nespouští
+- Kontaktní e-mail na webu: `support@nocode23.com` (hero CTA, sekce Kontakt, footer) — **nikdy neuvádět jméno ani osobní e-mail uživatele**
 - Live server funguje — není třeba otvírat soubory přes `open` příkaz po každé editaci
 - Uživatel mluví česky, odpovídej česky
 
 ## Nástroje v sekci Technologie
 
-Claude AI, Claude Code, ChatGPT, Codex, Visual Studio Code, Swift/SwiftUI, Xcode, Raycast, TestFlight, App Store Connect, GitHub, GitHub Pages, Wedos Hosting — vše jako `<a class="t-tag">` s odkazem, `target="_blank" rel="noopener"`.
+Claude AI, Claude Code, ChatGPT, Codex, Visual Studio Code, Swift/SwiftUI, Xcode, Raycast, TestFlight, App Store Connect, GitHub, GitHub Pages, Wedos Hosting, Cloudflare — vše jako `<a class="t-tag">` s odkazem, `target="_blank" rel="noopener"`, rozdělené do skupin (AI / Apple vývoj / Editor & nástroje / Infrastruktura) s popiskem `.tg-label`.
