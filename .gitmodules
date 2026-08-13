@@ -4,3 +4,6 @@
 [submodule "www/daily-routines-and-habits"]
 	path = www/daily-routines-and-habits
 	url = https://github.com/nocode23/daily-routines-habits-web.git
+[submodule "www/limits"]
+	path = www/limits
+	url = https://github.com/nocode23/limits-web.git
