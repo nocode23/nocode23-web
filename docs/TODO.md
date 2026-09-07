@@ -1,6 +1,6 @@
 # Audit webu — stav úprav
 
-7. září 2026. Změny jsou připravené lokálně; veřejný web zatím nebyl aktualizován.
+7. září 2026. Verze `f0721c5` byla nasazena přes GitHub na nocode23.com. Cloudflare Pages potvrdilo úspěch; ověřeno všech 14 veřejných HTML stránek a nové obrázky.
 
 ## Hotovo v této verzi
 
@@ -34,7 +34,7 @@
 
 - [ ] P1: Aktivovat šablonu GitHub Actions po zajištění oprávnění `workflow`; lokální kontrolní a publikační skript fungují již nyní.
 
-- [ ] P1: Publikovat připravenou verzi a ověřit nasazení na Cloudflare. GitHub workflow zatím není aktivní; OAuth přihlášení nemá scope `workflow`. Šablona zůstává v `docs/workflows/verify.yml`.
+- [x] P1: Publikovat připravenou verzi a ověřit nasazení na Cloudflare — dokončeno 7. září 2026 (`f0721c5`). GitHub workflow zatím není aktivní; OAuth přihlášení nemá scope `workflow`. Šablona zůstává v `docs/workflows/verify.yml`.
 - [ ] P1: Nastavit v Cloudflare build command pro blokování chybného nasazení (viz STRUCTURE.md). Lokální skript a GitHub workflow toto nastavení samy nemění.
 - [ ] P2: Nové české screenshoty Daily Routines a screenshot widgetu. Dostupná sada je anglická; nepřekreslovat rozhraní uměle.
 - [ ] P2: Doplnit skutečnou krátkou ukázku menu baru a Docku Limits bez osobních údajů.
