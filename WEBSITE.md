@@ -1,3 +1,5 @@
+> Historický brief. Nejde o aktuální specifikaci; původní tvrzení o automatickém mazání dat byla opravena. Aktuální obsah: `www/limits/`, postup údržby: `docs/STRUCTURE.md`.
+
 # Podklad pro web appky Limits
 
 Tohle je obsahový brief pro stavbu jednostránkového webu (landing page) pro

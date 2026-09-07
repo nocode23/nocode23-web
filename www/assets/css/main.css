@@ -278,7 +278,7 @@ nav {
 .hero-title {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(4rem, 11vw, 9rem);
+  font-size: clamp(2.5rem, 11vw, 9rem);
   line-height: .92;
   letter-spacing: -.05em;
   margin-bottom: 36px;
@@ -976,4 +976,39 @@ html.js .d3 { transition-delay: .3s; }
   .nav-links a { font-size: .72rem; }
   .app-duo { grid-template-columns: 1fr; }
   .app-shot { aspect-ratio: 9 / 10; }
+}
+
+/* Project summaries and keyboard navigation. */
+.project-note { margin: 12px 0 0; color: var(--text-dim); font-size: .95rem; line-height: 1.65; }
+.app-cell .feat-project { flex: 0; }
+.feat-name { font-size: 1rem; }
+.feat-sub { font-size: .875rem; white-space: normal; }
+.hero { min-height: auto; padding-top: 150px; padding-bottom: 96px; }
+.hero-scroll { display: none; }
+:focus-visible { outline: 3px solid var(--cyan); outline-offset: 5px; }
+.skip-link { position: fixed; top: 10px; left: 10px; z-index: 1000; padding: 12px 18px; background: #fff; color: #07070e; transform: translateY(-160%); }
+.skip-link:focus { transform: none; }
+@media (max-width: 720px) {
+  .hero { padding-top: 120px; padding-bottom: 64px; }
+  .b3-inner { gap: 24px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html.js .reveal { opacity: 1; transform: none; }
+}
+
+.project-visual { aspect-ratio: 1200 / 630; object-fit: contain; }
+
+.book-preview { display: block; padding: 24px; background: #f8f4ef; color: #761b2c; text-decoration: none; }
+.book-preview-title { display: block; font-size: 1rem; font-weight: 500; letter-spacing: .08em; margin-bottom: 22px; }
+.book-covers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: end; }
+.book-covers img { display: block; width: 100%; height: auto; max-height: 180px; object-fit: contain; object-position: bottom; }
+.book-preview-caption { display: block; margin-top: 22px; font-size: .9rem; }
+.book-preview:hover .book-preview-caption { text-decoration: underline; }
+
+section[id] { scroll-margin-top: 110px; }
+@media (max-width: 460px) {
+  .nav-inner { flex-direction: column; gap: 8px; padding-inline: 16px; }
+  .nav-links { gap: 24px; justify-content: center; }
+  .nav-links a { font-size: .875rem; white-space: nowrap; }
+  .hero { padding-top: 145px; }
 }

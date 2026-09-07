@@ -1,17 +1,61 @@
 {
-  "apps": [
+  "projects": [
     {
       "id": "lacto-tracker",
       "name": "Lacto Tracker",
+      "type": "app",
+      "platform": "iOS",
       "status": "live",
-      "category": "App · iOS",
-      "description": "Sledování kojení · iOS · App Store",
+      "description": "Sledování kojení · App Store",
+      "url": "lacto-tracker/index-cs.html",
+      "logo": "lacto-tracker/assets/images/app_logo.webp",
       "appStoreId": "6760203009",
-      "appStoreUrl": "https://apps.apple.com/app/lacto-tracker/id6760203009",
-      "directory": "lacto-tracker",
-      "logo": "lacto-tracker/assets/images/app_logo.png",
-      "logoWebp": "lacto-tracker/assets/images/app_logo.webp",
-      "siteUrl": "lacto-tracker/index.html"
+      "appStoreUrl": "https://apps.apple.com/cz/app/lacto-tracker/id6760203009",
+      "note": "Záznam kojení, přehled dne a statistiky. Ovládání jednou rukou a data uložená v iPhonu."
+    },
+    {
+      "id": "daily-routines-and-habits",
+      "name": "Daily Routines & Habits",
+      "type": "app",
+      "platform": "iOS",
+      "status": "live",
+      "description": "Denní rutiny · iPhone a iPad",
+      "url": "daily-routines-and-habits/cs/",
+      "logo": "daily-routines-and-habits/assets/images/app-icon-small.png",
+      "appStoreId": "6775655422",
+      "appStoreUrl": "https://apps.apple.com/cz/app/daily-routines-habits/id6775655422",
+      "note": "Rutiny podle oblastí života, denní cíle a přehled pokroku. Se synchronizací mezi iPhonem a iPadem."
+    },
+    {
+      "id": "dj-matty",
+      "name": "DJ Matty",
+      "type": "web",
+      "status": "live",
+      "description": "Prezentační web pro profesionálního DJ",
+      "url": "https://www.djmatty.cz/",
+      "logo": "assets/images/logo-djmatty.png",
+      "note": "Služby, reference a fotografie z akcí na jednom místě. Web vede návštěvníka k nezávazné poptávce."
+    },
+    {
+      "id": "limits",
+      "name": "Limits",
+      "type": "app",
+      "platform": "macOS",
+      "status": "live",
+      "description": "Limity Claude a ChatGPT · macOS",
+      "url": "limits/",
+      "logo": "limits/assets/images/app-icon-512.png",
+      "note": "Využití AI účtů přímo v menu baru a Docku. S upozorněním před dosažením nastaveného limitu."
+    },
+    {
+      "id": "knihy-primus",
+      "name": "Knihy Primus",
+      "type": "web",
+      "status": "live",
+      "description": "Redesign rodinného e-shopu",
+      "url": "https://www.knihyprimus.cz",
+      "logo": "assets/images/logo-knihyprimus.png",
+      "note": "Nový vizuál a členění nabídky nakladatelství. Kategorie a doporučené tituly pomáhají s výběrem knih."
     }
   ]
 }

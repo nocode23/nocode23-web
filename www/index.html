@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>nocode23 — AI &amp; Vibe Coding Lab</title>
-  <meta name="description" content="Experimentuji s AI a vibe codingem. Od promptu ke spuštěnému produktu — weby, aplikace, grafika.">
+  <meta name="description" content="Experimentuji s AI a vibe codingem. Od promptu ke spuštěnému produktu — aplikace pro iOS a macOS, weby a e-shopy.">
   <meta name="author" content="nocode23">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#07070e">
@@ -17,7 +17,7 @@
   <meta property="og:type"        content="website">
   <meta property="og:url"         content="https://nocode23.com/">
   <meta property="og:title"       content="nocode23 — AI &amp; Vibe Coding Lab">
-  <meta property="og:description" content="Experimentuji s AI a vibe codingem. Od promptu ke spuštěnému produktu — weby, aplikace, grafika.">
+  <meta property="og:description" content="Experimentuji s AI a vibe codingem. Od promptu ke spuštěnému produktu — aplikace pro iOS a macOS, weby a e-shopy.">
   <meta property="og:image"       content="https://nocode23.com/assets/images/og.png">
   <meta property="og:image:width"  content="1200">
   <meta property="og:image:height" content="630">
@@ -26,15 +26,15 @@
 
   <meta name="twitter:card"        content="summary_large_image">
   <meta name="twitter:title"       content="nocode23 — AI &amp; Vibe Coding Lab">
-  <meta name="twitter:description" content="Experimentuji s AI a vibe codingem. Od promptu ke spuštěnému produktu — weby, aplikace, grafika.">
+  <meta name="twitter:description" content="Experimentuji s AI a vibe codingem. Od promptu ke spuštěnému produktu — aplikace pro iOS a macOS, weby a e-shopy.">
   <meta name="twitter:image"       content="https://nocode23.com/assets/images/og.png">
 
   <link rel="preload" href="assets/fonts/syne-800-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/outfit-300-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <script>document.documentElement.classList.add('js');</script>
   <link rel="stylesheet" href="assets/css/main.css?v=4">
 </head>
 <body>
+  <a class="skip-link" href="#main">Přejít na obsah</a>
 
   <!-- Ambient background -->
   <div class="blobs" aria-hidden="true">
@@ -49,13 +49,14 @@
     <div class="nav-inner">
       <a href="#" class="nav-logo">nocode23</a>
       <ul class="nav-links">
-        <li><a href="#o-projektu">O projektu</a></li>
         <li><a href="#projekty">Projekty</a></li>
+        <li><a href="#o-projektu">O projektu</a></li>
         <li><a href="#technologie">Technologie</a></li>
       </ul>
     </div>
   </nav>
 
+  <main id="main">
   <!-- Hero -->
   <section class="hero" aria-label="Úvod">
     <div class="hero-badge">AI &amp; Vibe Coding Lab</div>
@@ -64,13 +65,186 @@
       <span class="ht-accent">23</span>
     </h1>
     <p class="hero-tagline">Od promptu ke spuštěnému produktu.</p>
-    <p class="hero-sub"><span>Weby</span> &nbsp;·&nbsp; <span>Aplikace</span> &nbsp;·&nbsp; <span>Grafika</span></p>
+    <p class="hero-sub"><span>Aplikace</span> &nbsp;·&nbsp; <span>Weby</span> &nbsp;·&nbsp; <span>E-shopy</span></p>
     <div class="hero-cta">
       <a href="#projekty" class="btn btn-primary">Prohlédnout projekty</a>
     </div>
     <div class="hero-scroll" aria-hidden="true">
       <div class="scroll-line"></div>
       scroll
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projekty">
+    <div class="wrap">
+      <div class="sec-label">Projekty</div>
+      <h2 class="sec-title reveal">Co jsem postavil</h2>
+
+      <div class="bento">
+
+        <!-- App iOS -->
+        <div class="card c-violet b1 reveal">
+          <span class="c-tag tag-app">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M11 9h4a2 2 0 0 0 2-2V3"/><circle cx="9" cy="9" r="2"/><path d="M7 21v-4a2 2 0 0 1 2-2h4"/><circle cx="15" cy="15" r="2"/></svg>
+            Aplikace · iOS
+          </span>
+          <div class="c-title">iOS aplikace</div>
+          <div class="c-desc">Nativní aplikace pro iPhone vyvíjené pomocí SwiftUI a AI asistence. Důraz na jednoduchost a soukromí.</div>
+
+          <div class="feat-divider">Spuštěno</div>
+
+          <div class="app-duo">
+            <div class="app-cell">
+              <img src="lacto-tracker/assets/images/main_screen_cs.webp"
+                   alt="Lacto Tracker — hlavní obrazovka aplikace" class="app-shot" loading="lazy" width="620" height="1341">
+              <!-- project:lacto-tracker:start -->
+              <a href="lacto-tracker/index-cs.html" class="feat-project" data-project="lacto-tracker">
+                <img src="lacto-tracker/assets/images/app_logo.webp" alt="" class="feat-logo" loading="lazy" width="36" height="36">
+                <div class="feat-info">
+                  <div class="feat-name">Lacto Tracker</div>
+                  <div class="feat-sub">Sledování kojení · App Store</div>
+                </div>
+                <span class="feat-arrow" aria-hidden="true">→</span>
+              </a>
+              <p class="project-note">Záznam kojení, přehled dne a statistiky. Ovládání jednou rukou a data uložená v iPhonu.</p>
+<!-- project:lacto-tracker:end -->
+            </div>
+            <div class="app-cell">
+              <img src="daily-routines-and-habits/assets/images/01_dashboard_dark.png"
+                   alt="Daily Routines &amp; Habits — přehled návyků" class="app-shot" loading="lazy" width="1320" height="2868">
+              <!-- project:daily-routines-and-habits:start -->
+              <a href="daily-routines-and-habits/cs/" class="feat-project" data-project="daily-routines-and-habits">
+                <img src="daily-routines-and-habits/assets/images/app-icon-small.png" alt="" class="feat-logo" loading="lazy" width="36" height="36">
+                <div class="feat-info">
+                  <div class="feat-name">Daily Routines &amp; Habits</div>
+                  <div class="feat-sub">Denní rutiny · iPhone a iPad</div>
+                </div>
+                <span class="feat-arrow" aria-hidden="true">→</span>
+              </a>
+              <p class="project-note">Rutiny podle oblastí života, denní cíle a přehled pokroku. Se synchronizací mezi iPhonem a iPadem.</p>
+<!-- project:daily-routines-and-habits:end -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Web -->
+        <div class="card c-blue b2 reveal d1">
+          <span class="c-tag tag-web">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></svg>
+            Web
+          </span>
+          <div class="c-title">Webové projekty</div>
+          <div class="c-desc">Weby, které představí službu a usnadní další krok — od prohlédnutí referencí po odeslání poptávky.</div>
+
+          <div class="browser">
+            <div class="browser-head">
+              <span class="term-dot td-r"></span>
+              <span class="term-dot td-y"></span>
+              <span class="term-dot td-g"></span>
+              <span class="browser-url">djmatty.cz</span>
+            </div>
+            <img src="assets/images/preview-djmatty.jpg" alt="Vizuál DJ Matty — svatby, firemní večírky a oslavy" class="browser-shot project-visual" loading="lazy" width="1200" height="630">
+          </div>
+
+          <div class="feat-divider">Spuštěno</div>
+
+          <!-- project:dj-matty:start -->
+              <a href="https://www.djmatty.cz/" class="feat-project" data-project="dj-matty" target="_blank" rel="noopener">
+                <img src="assets/images/logo-djmatty.png" alt="" class="feat-logo" loading="lazy" width="36" height="36">
+                <div class="feat-info">
+                  <div class="feat-name">DJ Matty</div>
+                  <div class="feat-sub">Prezentační web pro profesionálního DJ</div>
+                </div>
+                <span class="feat-arrow" aria-hidden="true">↗</span>
+              </a>
+              <p class="project-note">Služby, reference a fotografie z akcí na jednom místě. Web vede návštěvníka k nezávazné poptávce.</p>
+<!-- project:dj-matty:end -->
+        </div>
+
+        <!-- macOS -->
+        <div class="card c-green b4 reveal">
+          <div class="b3-inner">
+            <div>
+              <span class="c-tag tag-macos">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"/></svg>
+                macOS
+              </span>
+              <div class="c-title">macOS aplikace</div>
+              <div class="c-desc">Nativní nástroje pro menu bar macOS. První v řadě sleduje, kolik ti zbývá z limitů Claude a ChatGPT — přímo z horní lišty, bez otevírání prohlížeče.</div>
+
+              <div class="feat-divider">Spuštěno</div>
+
+              <!-- project:limits:start -->
+              <a href="limits/" class="feat-project" data-project="limits">
+                <img src="limits/assets/images/app-icon-512.png" alt="" class="feat-logo" loading="lazy" width="36" height="36">
+                <div class="feat-info">
+                  <div class="feat-name">Limits</div>
+                  <div class="feat-sub">Limity Claude a ChatGPT · macOS</div>
+                </div>
+                <span class="feat-arrow" aria-hidden="true">→</span>
+              </a>
+              <p class="project-note">Využití AI účtů přímo v menu baru a Docku. S upozorněním před dosažením nastaveného limitu.</p>
+<!-- project:limits:end -->
+            </div>
+            <div class="browser b3-browser">
+              <div class="browser-head">
+                <span class="term-dot td-r"></span>
+                <span class="term-dot td-y"></span>
+                <span class="term-dot td-g"></span>
+                <span class="browser-url">Limits.app</span>
+              </div>
+              <img src="assets/images/shot-limits.png" alt="Náhled aplikace Limits — sledování limitů v menu baru" class="browser-shot browser-shot-mac" loading="lazy" width="415" height="498">
+            </div>
+          </div>
+        </div>
+
+        <!-- Grafika -->
+        <div class="card c-cyan b3 reveal">
+          <div class="b3-inner">
+            <div>
+              <span class="c-tag tag-grafika">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>
+                E-shop
+              </span>
+              <div class="c-title">E-shopy a jejich vizuál</div>
+              <div class="c-desc">Redesign rodinného e-shopu: představení nakladatelství, přehledné kategorie a cesta k jednotlivým knihám.</div>
+
+              <div class="feat-divider">Spuštěno</div>
+
+              <!-- project:knihy-primus:start -->
+              <a href="https://www.knihyprimus.cz" class="feat-project" data-project="knihy-primus" target="_blank" rel="noopener">
+                <img src="assets/images/logo-knihyprimus.png" alt="" class="feat-logo" loading="lazy" width="36" height="36">
+                <div class="feat-info">
+                  <div class="feat-name">Knihy Primus</div>
+                  <div class="feat-sub">Redesign rodinného e-shopu</div>
+                </div>
+                <span class="feat-arrow" aria-hidden="true">↗</span>
+              </a>
+              <p class="project-note">Nový vizuál a členění nabídky nakladatelství. Kategorie a doporučené tituly pomáhají s výběrem knih.</p>
+<!-- project:knihy-primus:end -->
+            </div>
+            <div class="browser b3-browser">
+              <div class="browser-head">
+                <span class="term-dot td-r"></span>
+                <span class="term-dot td-y"></span>
+                <span class="term-dot td-g"></span>
+                <span class="browser-url">knihyprimus.cz</span>
+              </div>
+              <a href="https://www.knihyprimus.cz/" class="book-preview" target="_blank" rel="noopener" aria-label="Prohlédnout e-shop Knihy Primus">
+                <span class="book-preview-title">Knihy Primus</span>
+                <span class="book-covers">
+                  <img src="assets/images/primus-viden.jpg" alt="Vídeň je Vídeň — obálka" width="350" height="598" loading="lazy">
+                  <img src="assets/images/primus-burian.jpg" alt="Zdeněk Burian: Vlastní cestou — obálka" width="510" height="704" loading="lazy">
+                  <img src="assets/images/primus-pisne.jpg" alt="Písně mužů — obálka" width="350" height="621" loading="lazy">
+                </span>
+                <span class="book-preview-caption">Výběr titulů z e-shopu <span aria-hidden="true">↗</span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -82,23 +256,21 @@
       <div class="about-grid">
         <div class="about-text reveal">
           <p>
-            <strong>nocode23 je osobní laboratoř</strong> experimentů s AI nástroji a přístupem
-            zvaným vibe coding — tvorbou softwaru řízenou představou a intuicí, kde těžkou práci
-            přebírá umělá inteligence.
+            <strong>nocode23 je osobní laboratoř</strong>, kde s pomocí AI stavím aplikace a weby
+            pro každodenní použití. Od prvního nápadu přes návrh rozhraní a kód až po zveřejnění.
           </p>
           <p>
-            Nezačínám od teorie, ale od projektů. Každý experiment je reálná věc: spuštěný web,
-            funkční aplikace, grafika odeslaná klientovi. Od <strong>landing pages</strong> přes
-            <strong>iOS aplikace</strong> až po <strong>grafiku pro e-shopy</strong> hledám hranice
-            toho, co lze postavit bez tradičního vývoje — a sdílím, co funguje i co ne.
+            Začínám konkrétním problémem: zaznamenat kojení jednou rukou, udržet si návyky
+            nebo mít přehled o limitech AI. Výsledky najdeš v projektech výše — včetně
+            odkazů na hotové weby a aplikace.
           </p>
           <div class="stats">
             <div class="stat reveal d1">
-              <div class="stat-num">5</div>
-              <div class="stat-label">spuštěné projekty</div>
+              <div class="stat-num" data-stat="projects">5</div>
+              <div class="stat-label">spuštěných projektů</div>
             </div>
             <div class="stat reveal d2">
-              <div class="stat-num">3</div>
+              <div class="stat-num" data-stat="apps">3</div>
               <div class="stat-label">appky pro iOS a&nbsp;macOS</div>
             </div>
             <div class="stat reveal d3">
@@ -126,160 +298,6 @@
             <div class="term-line"><span class="t-prompt">&gt;</span>&nbsp;<span class="term-caret"></span></div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projekty">
-    <div class="wrap">
-      <div class="sec-label">Projekty</div>
-      <h2 class="sec-title reveal">Co jsem postavil</h2>
-
-      <div class="bento">
-
-        <!-- App iOS -->
-        <div class="card c-violet b1 reveal">
-          <span class="c-tag tag-app">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M11 9h4a2 2 0 0 0 2-2V3"/><circle cx="9" cy="9" r="2"/><path d="M7 21v-4a2 2 0 0 1 2-2h4"/><circle cx="15" cy="15" r="2"/></svg>
-            Aplikace · iOS
-          </span>
-          <div class="c-title">iOS aplikace</div>
-          <div class="c-desc">Nativní aplikace pro iPhone vyvíjené pomocí SwiftUI a AI asistence. Důraz na jednoduchost a soukromí.</div>
-
-          <div class="feat-divider">Spuštěno</div>
-
-          <div class="app-duo">
-            <div class="app-cell">
-              <img src="lacto-tracker/assets/images/main_screen_cs.webp"
-                   alt="Lacto Tracker — hlavní obrazovka aplikace" class="app-shot" loading="lazy" width="620" height="1341">
-              <a href="lacto-tracker/" class="feat-project">
-                <img src="lacto-tracker/assets/images/app_logo.png"
-                     srcset="lacto-tracker/assets/images/app_logo.webp"
-                     alt="" class="feat-logo" loading="lazy">
-                <div class="feat-info">
-                  <div class="feat-name">Lacto Tracker</div>
-                  <div class="feat-sub">Sledování kojení · App Store</div>
-                </div>
-                <span class="feat-arrow">→</span>
-              </a>
-            </div>
-            <div class="app-cell">
-              <img src="daily-routines-and-habits/assets/images/01_dashboard_dark.png"
-                   alt="Daily Routines &amp; Habits — přehled návyků" class="app-shot" loading="lazy" width="1320" height="2868">
-              <a href="daily-routines-and-habits/" class="feat-project">
-                <img src="daily-routines-and-habits/assets/images/app-icon.png"
-                     alt="" class="feat-logo" loading="lazy">
-                <div class="feat-info">
-                  <div class="feat-name">Daily Routines &amp; Habits</div>
-                  <div class="feat-sub">Sledování návyků · App Store</div>
-                </div>
-                <span class="feat-arrow">→</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Web -->
-        <div class="card c-blue b2 reveal d1">
-          <span class="c-tag tag-web">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></svg>
-            Web
-          </span>
-          <div class="c-title">Webové projekty</div>
-          <div class="c-desc">Landing pages, firemní weby a webové nástroje. Od prvního promptu po nasazení — bez tradičního vývoje.</div>
-
-          <div class="browser">
-            <div class="browser-head">
-              <span class="term-dot td-r"></span>
-              <span class="term-dot td-y"></span>
-              <span class="term-dot td-g"></span>
-              <span class="browser-url">djmatty.cz</span>
-            </div>
-            <img src="assets/images/shot-djmatty.jpg" alt="Náhled webu DJ Matty" class="browser-shot" loading="lazy" width="1280" height="800">
-          </div>
-
-          <div class="feat-divider">Spuštěno</div>
-
-          <a href="https://www.djmatty.cz/" class="feat-project" target="_blank" rel="noopener">
-            <div class="feat-logo feat-logo-emoji" aria-hidden="true">🎧</div>
-            <div class="feat-info">
-              <div class="feat-name">DJ Matty</div>
-              <div class="feat-sub">Prezentační web pro profesionálního DJ</div>
-            </div>
-            <span class="feat-arrow">↗</span>
-          </a>
-        </div>
-
-        <!-- macOS -->
-        <div class="card c-green b4 reveal">
-          <div class="b3-inner">
-            <div>
-              <span class="c-tag tag-macos">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"/></svg>
-                macOS
-              </span>
-              <div class="c-title">macOS aplikace</div>
-              <div class="c-desc">Nativní nástroje pro menu bar macOS. První v řadě sleduje, kolik ti zbývá z limitů Claude a ChatGPT — přímo z horní lišty, bez otevírání prohlížeče.</div>
-
-              <div class="feat-divider">Spuštěno</div>
-
-              <a href="limits/" class="feat-project">
-                <img src="limits/assets/images/app-icon-512.png"
-                     alt="" class="feat-logo" loading="lazy">
-                <div class="feat-info">
-                  <div class="feat-name">Limits</div>
-                  <div class="feat-sub">Sledování limitů Claude &amp; ChatGPT</div>
-                </div>
-                <span class="feat-arrow">→</span>
-              </a>
-            </div>
-            <div class="browser b3-browser">
-              <div class="browser-head">
-                <span class="term-dot td-r"></span>
-                <span class="term-dot td-y"></span>
-                <span class="term-dot td-g"></span>
-                <span class="browser-url">Limits.app</span>
-              </div>
-              <img src="assets/images/shot-limits.png" alt="Náhled aplikace Limits — sledování limitů v menu baru" class="browser-shot browser-shot-mac" loading="lazy" width="415" height="498">
-            </div>
-          </div>
-        </div>
-
-        <!-- Grafika -->
-        <div class="card c-cyan b3 reveal">
-          <div class="b3-inner">
-            <div>
-              <span class="c-tag tag-grafika">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>
-                Grafika
-              </span>
-              <div class="c-title">Grafika pro e-shopy</div>
-              <div class="c-desc">AI-generované vizuály pro e-shopy a sociální sítě — bannery, produktové fotografie, Instagram story formáty.</div>
-
-              <div class="feat-divider">Spuštěno</div>
-
-              <a href="https://www.knihyprimus.cz" class="feat-project" target="_blank" rel="noopener">
-                <div class="feat-logo feat-logo-emoji" aria-hidden="true">📚</div>
-                <div class="feat-info">
-                  <div class="feat-name">Knihy Primus</div>
-                  <div class="feat-sub">Kompletní redesign rodinného e-shopu</div>
-                </div>
-                <span class="feat-arrow">↗</span>
-              </a>
-            </div>
-            <div class="browser b3-browser">
-              <div class="browser-head">
-                <span class="term-dot td-r"></span>
-                <span class="term-dot td-y"></span>
-                <span class="term-dot td-g"></span>
-                <span class="browser-url">knihyprimus.cz</span>
-              </div>
-              <img src="assets/images/shot-knihyprimus.jpg" alt="Náhled e-shopu Knihy Primus" class="browser-shot" loading="lazy" width="1280" height="800">
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
@@ -320,6 +338,7 @@
     </div>
   </section>
 
+  </main>
   <!-- Footer -->
   <footer>
     <div class="footer-inner">

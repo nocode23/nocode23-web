@@ -1,73 +1,61 @@
-# STRUCTURE.md
+# Struktura nocode23.com
 
-Živá dokumentace projektu nocode23.com.
+Aktualizováno 7. září 2026. Statické HTML/CSS/JS bez frameworku a bez povinného buildu.
 
-## Adresářový strom
+## Repozitáře a hosting
 
+- Hlavní repo: `nocode23/nocode23-web`, větev `main`.
+- Cloudflare Pages: projekt `nocode23-web`, veřejný adresář `www/`.
+- Push hlavního repozitáře spouští nasazení podle stávajícího propojení Cloudflare Pages.
+- Přesné nastavení a výsledek nasazení ověř v Cloudflare; úspěšný Git push sám nepotvrzuje úspěšný deploy.
+- Tři produktové weby jsou připnuté git submoduly. Jejich vlastní push neposune odkaz hlavního repozitáře.
+- DJ Matty a Knihy Primus jsou externí weby; tento repozitář spravuje pouze jejich prezentaci v portfoliu.
+
+| Adresář | Repo | Obsah |
+| --- | --- | --- |
+| `www/` | nocode23-web | České portfolio, společná sitemap a robots.txt |
+| `www/lacto-tracker/` | lacto-tracker-web | EN `index.html`, CS `index-cs.html`, obě privacy |
+| `www/daily-routines-and-habits/` | daily-routines-habits-web | Routing dle jazyka, `cs/` a `en/`: index, privacy, support |
+| `www/limits/` | limits-web | EN produktová stránka a privacy; aplikace samotná v `nocode23/limits` |
+
+Lacto Tracker: App Store `6760203009`. Daily Routines & Habits: App Store `6775655422`. Obě aplikace jsou zveřejněné. Limits se distribuuje přes GitHub Releases.
+
+## Soubory a obsah
+
+- `www/data/apps.json`: metadata všech pěti projektů (pole `projects`).
+- `scripts/sync-projects.py`: přenese názvy, odkazy, ikony, popisy a počty do označených bloků `www/index.html`; stránka nepotřebuje JS pro načtení projektů.
+- `scripts/verify.py`: kontrola 14 HTML stránek, lokálních souborů a kotev, App Store CTA, canonical/hreflang, sitemap a shody s přehledem projektů.
+- `scripts/publish.py`: publikování commitnutých podprojektů před hlavním repozitářem; bez `--publish` pouze kontroluje stav.
+- `scripts/retire-legacy-hook.py`: jednorázově archivuje přesně známý chybný lokální pre-push hook. Jiného hooku se nedotkne.
+- `www/assets/`: styl, skripty, fonty a portfolio obrázky.
+- Produktové weby mají samostatné `assets/` a zachovávají vlastní vizuální styl.
+- `WEBSITE.md`: historický brief Limits, nikoli aktuální popis produktu. Aktuální text je v `www/limits/`.
+
+## Automatické kontroly
+
+Šablona `docs/workflows/verify.yml` je připravená pro kontrolu hlavní větve a pull requestů včetně rekurzivního checkoutu submodulů. Zatím není aktivní: současné GitHub OAuth přihlášení nemá scope `workflow` a server odmítl přidání do `.github/workflows/`. Po doplnění oprávnění přesuň šablonu do `.github/workflows/verify.yml` a pushni ji. Workflow samo nemění nastavení Cloudflare a není automatickou bránou přímého Pages nasazení. Před publikováním proto probíhá lokální ověření; pro blokování chybného deploye nastav v Cloudflare build command `python3 scripts/verify.py` při root directory repozitáře a output directory `www`. Toto nastavení zatím nebylo změněno.
+
+## Úpravy a kontrola
+
+```sh
+python3 scripts/sync-projects.py
+python3 scripts/verify.py
+python3 -m unittest discover -s tests
+python3 -m http.server 8765 --bind 127.0.0.1 --directory www
 ```
-nocode23.com/
-  www/                        ← web root (nasazuje se na Cloudflare Pages)
-    index.html
-    robots.txt
-    sitemap.xml
-    assets/
-      css/main.css
-      js/main.js
-      images/
-        logo-djmatty.png      ← lokálně stažené logo
-        logo-knihyprimus.png  ← lokálně stažené logo
-    data/
-      apps.json               ← jediný zdroj pravdy o všech aplikacích
-    lacto-tracker/            ← git submodule (github.com/nocode23/lacto-tracker-web)
-      index.html              ← EN verze
-      index-cs.html           ← CS verze
-      privacy-policy.html
-      privacy-policy-cs.html
-      sitemap.xml
-      assets/
-        css/main.css
-        js/main.js
-        fonts/
-        images/
-    daily-routines-and-habits/ ← git submodule (github.com/nocode23/daily-routines-habits-web)
-      index.html              ← landing page (EN + CS přepínač)
-      privacy.html
-      support.html
-      assets/
-        css/main.css
-        js/main.js
-        images/               ← app-icon.png, screenshoty (light + dark)
-  shared/                     ← sdílené assety (zatím prázdné)
-  docs/
-    STRUCTURE.md              ← tento soubor
-  .vscode/
-    settings.json             ← liveServer.settings.root = /www
-  CLAUDE.md
-```
 
-## Hosting a deployment
+Nový projekt: přidej metadata a jeden pár komentářů `project:ID:start` / `project:ID:end` do portfolia, potom spusť synchronizaci. Vizuál a umístění karty se upravují v HTML/CSS. Přidání nové aplikace znamená také doplnění submodulu a seznamu `MODULES` v publish skriptu.
 
-- **Cloudflare Pages** — projekt `nocode23-web`, output: `www/`
-- **GitHub** — `github.com/nocode23/nocode23-web` (public)
-- **DNS** — na Cloudflare (přesunuto z czechia.cz)
-- **Doména** — registrována na czechia.cz
-- **Auto-deploy** — git push → Cloudflare Pages nasadí automaticky
+## Publikování
 
-## Aplikace
+1. Uprav a zkontroluj web. Commitni změny v každém upraveném podprojektu; poté commitni soubory hlavního repozitáře. Do commitu ber jen změny určené k vydání.
+2. Jednorázově spusť `python3 scripts/retire-legacy-hook.py`, pokud tato kopie ještě obsahuje starý hook Daily Routines.
+3. Spusť `python3 scripts/publish.py` pro kontrolu. Vyžaduje čisté pracovní stromy, větev `main` a prázdný index hlavního repozitáře; připouští pouze změněné odkazy submodulů.
+4. `python3 scripts/publish.py --publish` pushne postupně všechny tři podprojekty a ověří jejich zveřejněné SHA. Teprve poté commitne změněné odkazy a pushne hlavní repo. Při neúspěchu se zastaví. Neprovádí force push ani automatické slučování.
+5. Ověř výsledek Cloudflare Pages a živé stránky včetně obou jazyků, podpory a tlačítek ke stažení.
 
-| ID                        | Název                      | Stav        | GitHub repo                              | App Store ID |
-|---------------------------|----------------------------|-------------|------------------------------------------|--------------|
-| lacto-tracker             | Lacto Tracker              | live        | nocode23/lacto-tracker-web (public)      | 6760203009   |
-| daily-routines-and-habits | Daily Routines &amp; Habits | in review   | nocode23/daily-routines-habits-web (public) | TBD       |
+Skript nepřebírá jiné staged změny, nespouští starý cross-repo hook a neobchází neznámé hooky. Současné publikování ze dvou pracovních kopií není podporované; git odmítnutí řeš před dalším spuštěním.
 
-## Changelog
+## Obsahová kontrola při změně aplikace
 
-| Datum      | Změna |
-|------------|-------|
-| 2026-06-07 | [www] Migrace — index.html a assets/ přesunuty do www/, vytvořena struktura www/data/apps.json, shared/, docs/ |
-| 2026-06-07 | [www] lacto-tracker jako git submodule (github.com/nocode23/lacto-tracker-web) |
-| 2026-06-07 | [www] Cloudflare Pages nasazen, DNS přesunuto na Cloudflare |
-| 2026-06-07 | [www] Meta tagy, Lucide ikony v bento tagech, t-green barva pro hosting/infra |
-| 2026-06-07 | [www] Loga DJ Matty a Knihy Primus stažena lokálně do assets/images/ |
-| 2026-06-08 | [www] Daily Routines &amp; Habits přidána do bento gridu jako druhá iOS aplikace |
-| 2026-06-08 | [daily-routines] Submodule github.com/nocode23/daily-routines-habits-web přidán, CLAUDE.md v .gitignore |
+Funkce, kompatibilita, data a mazání se musí shodovat s vydanou aplikací. Při změně iCloudu nebo účtů projdi homepage, support a privacy v EN i CS. Screenshoty mají být skutečné a bez osobních dat. Nevytvářej smyšlené reference ani výsledky projektu.

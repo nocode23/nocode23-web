@@ -4,6 +4,7 @@ const obs = new IntersectionObserver(
   { threshold: 0.1 }
 );
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+document.documentElement.classList.add('js');
 
 // Blob physics — pomalé plutí, odpuzování od kurzoru, odrazy od stěn i sebe navzájem.
 // Pozicuje se přes transform (bez layout přepočtu); základní pozice v CSS
