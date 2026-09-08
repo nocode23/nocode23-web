@@ -634,7 +634,7 @@ section {
   box-shadow: 0 14px 40px rgba(0,0,0,.35);
 }
 /* Odkazy pod telefony roztáhnout na shodnou výšku (delší název se zalomí na 2 řádky) */
-.app-cell .feat-project { flex: 1; }
+.app-cell .feat-project { flex: 1; min-height: 104px; box-sizing: border-box; }
 
 /* Browser frame — náhledy webů */
 .browser {
@@ -981,7 +981,7 @@ html.js .d3 { transition-delay: .3s; }
 
 /* Project summaries and keyboard navigation. */
 .project-note { margin: 12px 0 0; color: var(--text-dim); font-size: .95rem; line-height: 1.65; }
-.app-cell .feat-project { flex: 0; }
+.app-cell .feat-project { flex: 0 0 104px; }
 .feat-name { font-size: 1rem; }
 .feat-sub { font-size: .875rem; white-space: normal; }
 .hero { min-height: auto; padding-top: 150px; padding-bottom: 96px; }
