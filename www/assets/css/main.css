@@ -1000,8 +1000,7 @@ html.js .d3 { transition-delay: .3s; }
 
 .book-preview { display: block; padding: 24px; background: #f8f4ef; color: #761b2c; text-decoration: none; }
 .book-preview-title { display: block; font-size: 1rem; font-weight: 500; letter-spacing: .08em; margin-bottom: 22px; }
-.book-covers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: end; }
-.book-covers img { display: block; width: 100%; height: auto; max-height: 180px; object-fit: contain; object-position: bottom; }
+.book-site-shot { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; border: 1px solid rgba(118, 27, 44, .14); }
 .book-preview-caption { display: block; margin-top: 22px; font-size: .9rem; }
 .book-preview:hover .book-preview-caption { text-decoration: underline; }
 
