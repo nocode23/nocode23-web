@@ -1,6 +1,6 @@
 # Struktura nocode23.com
 
-Aktualizováno 7. září 2026. Statické HTML/CSS/JS bez frameworku a bez povinného buildu.
+Aktualizováno 8. září 2026. Statické HTML/CSS/JS bez frameworku a bez povinného buildu.
 
 ## Repozitáře a hosting
 

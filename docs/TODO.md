@@ -1,6 +1,6 @@
 # Audit webu — stav úprav
 
-7. září 2026. Verze `f0721c5` byla nasazena přes GitHub na nocode23.com. Cloudflare Pages potvrdilo úspěch; ověřeno všech 14 veřejných HTML stránek a nové obrázky.
+8. září 2026. Poslední verze `43b4b16` byla nasazena přes GitHub na nocode23.com. Cloudflare Pages potvrdilo úspěch; ověřeno všech 14 veřejných HTML stránek. Stručný changelog je v `docs/CHANGELOG.md`.
 
 ## Hotovo v této verzi
 
@@ -10,7 +10,7 @@
 - [x] P0: Opravená tvrzení Limits o koši, WebKit úložišti, autentizaci a rozsahu čtených dat podle zdrojového kódu. Text doporučuje Disconnect a neslibuje vymazání všech dat odinstalací.
 - [x] P1: Projekty před sekcí O projektu; kratší úvod a popisy konkrétního přínosu všech pěti projektů. Knihy Primus zařazeny jako e-shop.
 - [x] P1: Názvy, odkazy, ikony, popisy a počty mají společný zdroj v apps.json. Generátor ukládá přímo HTML, není nutné čekat na JS/fetch.
-- [x] P1: Náhled DJ Matty nahrazen existujícím čitelným projektovým vizuálem; Knihy Primus ukazují skutečné obálky z katalogu, označené jako výběr titulů, nikoli jako screenshot stránky.
+- [x] P1: Náhled DJ Matty nahrazen existujícím čitelným projektovým vizuálem; Knihy Primus používají skutečný malý náhled celé homepage e-shopu místo obálek knih.
 - [x] P1: Aktualizovaná hlavní dokumentace a označený historický brief Limits.
 - [x] P1: Kontrolní skript pro všechny stránky a připravená šablona GitHub Actions workflow.
 - [x] P2: Daily Routines zahrnuté do sitemap, absolutní canonical/hreflang. České portfolio vede na české produktové weby; český App Store badge.
@@ -20,6 +20,7 @@
 - [x] P2: Limits nabízí skutečný screenshot panelu, přímé stažení ZIP a instalační postup; verze odkazuje na aktuální release.
 - [x] P2: Daily Routines doplněno o skutečný screenshot iPadu ve světlé i tmavé variantě.
 - [x] P2: Opravené přetékání velkého loga a zalamování navigace homepage na mobilu.
+- [x] P2: Sjednocená výška ohraničených karet Lacto Tracker a Daily Routines & Habits.
 
 ## Ověření
 
@@ -45,6 +46,6 @@
 ## Zdroje nových obrazových podkladů
 
 - DJ Matty: existující `djmatty/images/og-image.jpg`, kopie jako `www/assets/images/preview-djmatty.jpg`.
-- Knihy Primus: existující obálky `viden-je-viden.jpg`, `pisne-muzu.jpg`, `vlastni-cestou.jpeg` z veřejného katalogu knihyprimus.cz; staženo 7. září 2026.
+- Knihy Primus: existující screenshot homepage `www/assets/images/shot-knihyprimus.jpg`.
 - iPad: existující `Again/apple_connect/screenshots/ipad/02_dashboard.png` a tmavá varianta; optimalizováno pro web.
 - Limits: již existující `assets/images/screenshot-panel.png`.
