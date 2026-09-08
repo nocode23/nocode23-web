@@ -687,6 +687,7 @@ section {
   align-items: center;
 }
 .b3-browser { margin-top: 0; }
+.b3-shop-inner { grid-template-columns: .82fr 1.5fr; }
 
 /* Featured project inside card */
 .feat-divider {
@@ -998,10 +999,9 @@ html.js .d3 { transition-delay: .3s; }
 
 .project-visual { aspect-ratio: 1200 / 630; object-fit: contain; }
 
-.book-preview { display: block; padding: 24px; background: #f8f4ef; color: #761b2c; text-decoration: none; }
-.book-preview-title { display: block; font-size: 1rem; font-weight: 500; letter-spacing: .08em; margin-bottom: 22px; }
-.book-site-shot { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; border: 1px solid rgba(118, 27, 44, .14); }
-.book-preview-caption { display: block; margin-top: 22px; font-size: .9rem; }
+.book-preview { display: block; background: #f8f4ef; color: #761b2c; text-decoration: none; }
+.book-site-shot { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: top; }
+.book-preview-caption { display: block; padding: 12px 16px 14px; font-size: .85rem; }
 .book-preview:hover .book-preview-caption { text-decoration: underline; }
 
 section[id] { scroll-margin-top: 110px; }
